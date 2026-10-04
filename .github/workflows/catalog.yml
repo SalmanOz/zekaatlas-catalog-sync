@@ -1,0 +1,114 @@
+name: Check official AI tool sources
+
+on:
+  schedule:
+    - cron: '37 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: catalog-check
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    outputs:
+      public_report: ${{ steps.report.outputs.payload }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+      - name: Verify crawler and source manifest
+        run: python -m unittest discover -s tests -v
+      - name: Check public sources and send signed observations
+        env:
+          INGEST_ENDPOINT: ${{ vars.INGEST_ENDPOINT }}
+          INGEST_SECRET: ${{ secrets.INGEST_SECRET }}
+        run: python crawler.py --send
+      - name: Prepare public report and aggregate summary
+        id: report
+        if: always()
+        run: |
+          python - <<'PY'
+          import base64, json, os
+          from pathlib import Path
+          from crawler import canonical_bytes, load_manifest
+          from public_snapshot import sanitize_report
+          report = Path('out/observations.json')
+          if report.exists():
+              batch = sanitize_report(json.loads(report.read_text()), load_manifest(Path('manifest.json')))
+              payload = base64.b64encode(canonical_bytes(batch)).decode('ascii')
+              with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+                  output.write(f'payload={payload}\n')
+              checks = batch['observations']
+              reached = sum(item['reachable'] for item in checks)
+              reasons = {}
+              for item in checks:
+                  reason = item['source_metadata'].get('reason')
+                  if reason:
+                      reasons[reason] = reasons.get(reason, 0) + 1
+              with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as summary:
+                  summary.write(f'Checked {len(checks)} allowlisted sources; {reached} public HTML responses.\n\n')
+                  for reason, count in sorted(reasons.items()):
+                      summary.write(f'- {reason}: {count}\n')
+          PY
+  snapshot:
+    needs: check
+    if: always() && needs.check.outputs.public_report != ''
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+      - name: Save sanitized public metadata
+        env:
+          PUBLIC_REPORT: ${{ needs.check.outputs.public_report }}
+        run: |
+          python - <<'PY'
+          import base64, json, os
+          from pathlib import Path
+          from crawler import load_manifest
+          from public_snapshot import save_snapshot
+          batch = json.loads(base64.b64decode(os.environ['PUBLIC_REPORT'], validate=True))
+          changed = save_snapshot(batch, load_manifest(Path('manifest.json')), Path('data/latest.json'))
+          print('Public report changed' if changed else 'Public report unchanged')
+          PY
+      - name: Commit changed public report
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPORT_BRANCH: ${{ github.event.repository.default_branch }}
+          GIT_TERMINAL_PROMPT: '0'
+        run: |
+          git add -- data/latest.json
+          if git diff --cached --quiet -- data/latest.json; then
+            echo 'No public report change to commit'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit --only -m 'Update public AI tool source observations' -- data/latest.json
+          cat > "$RUNNER_TEMP/git-askpass.sh" <<'SH'
+          #!/bin/sh
+          case "$1" in
+            *Username*) printf '%s\n' 'x-access-token' ;;
+            *Password*) printf '%s\n' "$GH_TOKEN" ;;
+          esac
+          SH
+          chmod 700 "$RUNNER_TEMP/git-askpass.sh"
+          if ! GIT_ASKPASS="$RUNNER_TEMP/git-askpass.sh" git -c credential.helper= push origin "HEAD:$REPORT_BRANCH"; then
+            echo '::error::Public report push failed. Check branch protection or concurrent changes. Completed ingestion has not been rolled back.'
+            exit 1
+          fi

@@ -1,0 +1,369 @@
+{
+  "batch_id": "5cece6ee8d0ae103be44355f6513af9562fa05857d929c1322a434f23722e2b8",
+  "checked_at": "2026-10-04T01:19:22+00:00",
+  "observations": [
+    {
+      "checked_at": "2026-10-04T01:19:22+00:00",
+      "reachable": true,
+      "slug": "adobe-firefly",
+      "source_metadata": {
+        "final_url": "https://www.adobe.com/products/firefly.html",
+        "meta_description": "Create and edit images, audio, and video with Adobe Firefly’s Generative AI, plus try top models from Google, OpenAI, and more.",
+        "status": 200,
+        "title": "Adobe Firefly - Free Generative AI for Creatives"
+      },
+      "source_url": "https://www.adobe.com/products/firefly.html",
+      "url": "https://firefly.adobe.com/"
+    },
+    {
+      "checked_at": "2026-10-04T01:19:22+00:00",
+      "reachable": true,
+      "slug": "adobe-podcast",
+      "source_metadata": {
+        "final_url": "https://podcast.adobe.com/",
+        "meta_description": "Next generation audio from Adobe is here. Record, transcribe, edit, share. Crisp and clear, every time.",
+        "status": 200,
+        "title": "Adobe Podcast | AI audio recording and editing, all on the web"
+      },
+      "source_url": "https://podcast.adobe.com/",
+      "url": "https://podcast.adobe.com/"
+    },
+    {
+      "checked_at": "2026-10-04T01:19:22+00:00",
+      "reachable": true,
+      "slug": "canva",
+      "source_metadata": {
+        "final_url": "https://www.canva.com/newsroom/news/magic-studio/",
+        "meta_description": "We're excited to unveil the future of Canva with our most game-changing launch ever: Introducing Magic Studio. All the power of AI, all in one place.",
+        "status": 200,
+        "title": "Introducing Magic Studio: the power of AI, all in one place"
+      },
+      "source_url": "https://www.canva.com/newsroom/news/magic-studio/",
+      "url": "https://www.canva.com/magic-studio/"
+    },
+    {
+      "checked_at": "2026-10-04T01:19:22+00:00",
+      "reachable": true,
+      "slug": "chatgpt",
+      "source_metadata": {
+        "final_url": "https://chatgpt.com/overview/",
+        "meta_description": "ChatGPT helps you learn, create, and get things done. Ask questions, explore ideas, write content, analyze information, and more with AI.",
+        "status": 200,
+        "title": "Overview | ChatGPT"
+      },
+      "source_url": "https://chatgpt.com/overview/",
+      "url": "https://chatgpt.com/"
+    },
+    {
+      "checked_at": "2026-10-04T01:19:22+00:00",
+      "reachable": true,
+      "slug": "claude",
+      "source_metadata": {
+        "final_url": "https://claude.com/product/overview",
+        "meta_description": "Claude is the AI assistant for work. Hand off tasks, turn ideas into decks, spreadsheets and prototypes, and run scheduled tasks across your apps and files.",
+        "status": 200,
+        "title": "The AI for Problem Solvers | Claude by Anthropic"
+      },
+      "source_url": "https://claude.com/product/overview",
+      "url": "https://claude.ai/"
+    },
+    {
+      "checked_at": "2026-10-04T01:19:22+00:00",
+      "reachable": true,
+      "slug": "cursor",
+      "source_metadata": {
+        "final_url": "https://cursor.com/",
+        "meta_description": "Built to make you extraordinarily productive, agents turn ideas into code. Accelerate development by handing off tasks to Cursor.",
+        "status": 200,
+        "title": "AI Coding Agent for Building Ambitious Software | Cursor"
+      },
+      "source_url": "https://cursor.com/",
+      "url": "https://cursor.com/"
+    },
+    {
+      "checked_at": "2026-10-04T01:19:22+00:00",
+      "reachable": false,
+      "slug": "elevenlabs",
+      "source_metadata": {
+        "reason": "response_too_large"
+      },
+      "source_url": "https://elevenlabs.io/",
+      "url": "https://elevenlabs.io/"
+    },
+    {
+      "checked_at": "2026-10-04T01:19:22+00:00",
+      "reachable": false,
+      "slug": "elicit",
+      "source_metadata": {
+        "reason": "response_too_large"
+      },
+      "source_url": "https://elicit.com/",
+      "url": "https://elicit.com/"
+    },
+    {
+      "checked_at": "2026-10-04T01:19:22+00:00",
+      "reachable": false,
+      "slug": "gamma",
+      "source_metadata": {
+        "reason": "robots_unavailable"
+      },
+      "source_url": "https://gamma.app/",
+      "url": "https://gamma.app/"
+    },
+    {
+      "checked_at": "2026-10-04T01:19:22+00:00",
+      "reachable": false,
+      "slug": "gemini",
+      "source_metadata": {
+        "reason": "compressed_response_not_supported"
+      },
+      "source_url": "https://gemini.google/overview/",
+      "url": "https://gemini.google.com/"
+    },
+    {
+      "checked_at": "2026-10-04T01:19:22+00:00",
+      "reachable": true,
+      "slug": "github-copilot",
+      "source_metadata": {
+        "final_url": "https://github.com/features/copilot",
+        "meta_description": "GitHub Copilot works every step of the way, from an open issue to reviewing and merging a pull request. Use it in your editor, the terminal, on your desktop, and on GitHub.",
+        "status": 200,
+        "title": "GitHub Copilot · Your AI coding agent · GitHub · GitHubDuolingoFedExAmerican AirlinesShopifyStripeCocaColaCoyote LogisticsMercado LibreGeneral MotorsDuolingoFedExAmerican AirlinesShopifyStripeCocaColaCoyote LogisticsMercado LibreGeneral MotorsGitHubVisual StudioVS CodeXcodeJetBrainsNeovimEclipse IDE"
+      },
+      "source_url": "https://github.com/features/copilot",
+      "url": "https://github.com/features/copilot"
+    },
+    {
+      "checked_at": "2026-10-04T01:19:22+00:00",
+      "reachable": true,
+      "slug": "grammarly",
+      "source_metadata": {
+        "final_url": "https://www.grammarly.com/ai",
+        "meta_description": "Harness the power of Grammarly's AI to improve communication at work. Explore the leading AI communication assistant designed to help businesses of all sizes communicate clearly and collaborate efficiently.",
+        "status": 200,
+        "title": "Artificial Intelligence (AI) at GrammarlyGrammarly HomeGrammarly HomeGrammarly Home"
+      },
+      "source_url": "https://www.grammarly.com/ai",
+      "url": "https://www.grammarly.com/"
+    },
+    {
+      "checked_at": "2026-10-04T01:19:22+00:00",
+      "reachable": true,
+      "slug": "heygen",
+      "source_metadata": {
+        "final_url": "https://www.heygen.com/",
+        "meta_description": "Create AI videos from your ideas using HeyGen. Input text, image, or audio to create complete videos with narration, captions, visuals, and animations.",
+        "status": 200,
+        "title": "HeyGen: Create Realistic AI Videos of Yourself in MinutesBack to main menu"
+      },
+      "source_url": "https://www.heygen.com/",
+      "url": "https://www.heygen.com/"
+    },
+    {
+      "checked_at": "2026-10-04T01:19:22+00:00",
+      "reachable": true,
+      "slug": "ideogram",
+      "source_metadata": {
+        "final_url": "https://ideogram.ai/features/",
+        "meta_description": "Redirect page for Ideogram feature routing, which now resolves from the homepage.",
+        "status": 200,
+        "title": "Ideogram Features — Ideogram"
+      },
+      "source_url": "https://ideogram.ai/features/",
+      "url": "https://ideogram.ai/"
+    },
+    {
+      "checked_at": "2026-10-04T01:19:22+00:00",
+      "reachable": true,
+      "slug": "jasper",
+      "source_metadata": {
+        "final_url": "https://www.jasper.ai/",
+        "meta_description": "Orchestrate intelligent agents to run end-to-end marketing workflows delivering speed, control, and measurable impact.",
+        "status": 200,
+        "title": "Put AI agents to work for marketing | Jasper"
+      },
+      "source_url": "https://www.jasper.ai/",
+      "url": "https://www.jasper.ai/"
+    },
+    {
+      "checked_at": "2026-10-04T01:19:22+00:00",
+      "reachable": false,
+      "slug": "leonardo-ai",
+      "source_metadata": {
+        "final_url": "https://leonardo.ai/",
+        "reason": "http_403",
+        "status": 403
+      },
+      "source_url": "https://leonardo.ai/",
+      "url": "https://leonardo.ai/"
+    },
+    {
+      "checked_at": "2026-10-04T01:19:22+00:00",
+      "reachable": true,
+      "slug": "microsoft-copilot",
+      "source_metadata": {
+        "final_url": "https://www.microsoft.com/en-us/copilot/solutions/individuals",
+        "meta_description": "Create, organize, and move faster with Copilot in your favorite apps like Word, Excel, and PowerPoint. Explore Microsoft 365 plans for work and life.",
+        "status": 200,
+        "title": "Microsoft Copilot Plans for Individuals | Microsoft 365Your Privacy Choices Opt-Out IconYour Privacy Choices Opt-Out Icon"
+      },
+      "source_url": "https://www.microsoft.com/en-us/microsoft-copilot/for-individuals/",
+      "url": "https://copilot.microsoft.com/"
+    },
+    {
+      "checked_at": "2026-10-04T01:19:22+00:00",
+      "reachable": false,
+      "slug": "midjourney",
+      "source_metadata": {
+        "reason": "robots_unavailable"
+      },
+      "source_url": "https://www.midjourney.com/",
+      "url": "https://www.midjourney.com/"
+    },
+    {
+      "checked_at": "2026-10-04T01:19:22+00:00",
+      "reachable": true,
+      "slug": "notebooklm",
+      "source_metadata": {
+        "final_url": "https://notebook.google/students?hl=tr",
+        "meta_description": "Öğrencilere özel yapay zeka aracı Gemini Notebook ile ders notlarını özetleyin, çalışma kılavuzları oluşturun, yeni konuları hızla kavrayın ve daha etkili ders çalışın.",
+        "status": 200,
+        "title": "Gemini Notebook | Öğrenciler İçin Yapay Zeka Destekli Ders Çalışma Aracı"
+      },
+      "source_url": "https://notebook.google/students?hl=tr",
+      "url": "https://notebook.google/"
+    },
+    {
+      "checked_at": "2026-10-04T01:19:22+00:00",
+      "reachable": true,
+      "slug": "notion-ai",
+      "source_metadata": {
+        "final_url": "https://www.notion.com/product/ai",
+        "meta_description": "One tool that does it all. Search, generate, analyze, and chat—right inside Notion.",
+        "status": 200,
+        "title": "Meet your AI team | Notion"
+      },
+      "source_url": "https://www.notion.com/product/ai",
+      "url": "https://www.notion.com/product/ai"
+    },
+    {
+      "checked_at": "2026-10-04T01:19:22+00:00",
+      "reachable": false,
+      "slug": "perplexity",
+      "source_metadata": {
+        "final_url": "https://hub-prod.perplexity.ai/hub/faq/what-is-perplexity",
+        "reason": "http_404",
+        "status": 404
+      },
+      "source_url": "https://hub-prod.perplexity.ai/hub/faq/what-is-perplexity",
+      "url": "https://www.perplexity.ai/"
+    },
+    {
+      "checked_at": "2026-10-04T01:19:22+00:00",
+      "reachable": true,
+      "slug": "pika",
+      "source_metadata": {
+        "final_url": "https://pika.art/",
+        "meta_description": "AI creative tools. Built for Creatives.",
+        "status": 200,
+        "title": "PikaPika"
+      },
+      "source_url": "https://pika.art/",
+      "url": "https://pika.art/"
+    },
+    {
+      "checked_at": "2026-10-04T01:19:22+00:00",
+      "reachable": false,
+      "slug": "quillbot",
+      "source_metadata": {
+        "reason": "robots_unavailable"
+      },
+      "source_url": "https://quillbot.com/",
+      "url": "https://quillbot.com/"
+    },
+    {
+      "checked_at": "2026-10-04T01:19:22+00:00",
+      "reachable": false,
+      "slug": "quizlet",
+      "source_metadata": {
+        "final_url": "https://quizlet.com/features/ai-study-tools",
+        "reason": "http_403",
+        "status": 403
+      },
+      "source_url": "https://quizlet.com/features/ai-study-tools",
+      "url": "https://quizlet.com/features/ai-study-tools"
+    },
+    {
+      "checked_at": "2026-10-04T01:19:22+00:00",
+      "reachable": true,
+      "slug": "replit",
+      "source_metadata": {
+        "final_url": "https://replit.com/products/agent",
+        "meta_description": "Build production-ready apps and websites with Replit Agent. Describe what you need, then let AI write, test, fix, and publish your software.",
+        "status": 200,
+        "title": "AI Coding Agent: Build Apps Through Chat | Replit"
+      },
+      "source_url": "https://replit.com/products/agent",
+      "url": "https://replit.com/products/agent"
+    },
+    {
+      "checked_at": "2026-10-04T01:19:22+00:00",
+      "reachable": false,
+      "slug": "runway",
+      "source_metadata": {
+        "reason": "response_too_large"
+      },
+      "source_url": "https://runway.com/",
+      "url": "https://runway.com/"
+    },
+    {
+      "checked_at": "2026-10-04T01:19:22+00:00",
+      "reachable": true,
+      "slug": "suno",
+      "source_metadata": {
+        "final_url": "https://suno.com/",
+        "meta_description": "Create stunning original music for free in seconds using our AI generator. Make your own masterpieces, share with friends, and discover music from artists worldwide.",
+        "status": 200,
+        "title": "Suno | AI Music Generator"
+      },
+      "source_url": "https://suno.com/",
+      "url": "https://suno.com/"
+    },
+    {
+      "checked_at": "2026-10-04T01:19:22+00:00",
+      "reachable": true,
+      "slug": "synthesia",
+      "source_metadata": {
+        "final_url": "https://www.synthesia.io/",
+        "meta_description": "Official Synthesia site. The AI video platform trusted by 90%+ of the Fortune 100 to communicate, train, and upskill teams in 140+ languages.",
+        "status": 200,
+        "title": "Synthesia: #1 AI Video Platform for Business"
+      },
+      "source_url": "https://www.synthesia.io/",
+      "url": "https://www.synthesia.io/"
+    },
+    {
+      "checked_at": "2026-10-04T01:19:22+00:00",
+      "reachable": false,
+      "slug": "v0",
+      "source_metadata": {
+        "reason": "response_too_large"
+      },
+      "source_url": "https://v0.app/",
+      "url": "https://v0.app/"
+    },
+    {
+      "checked_at": "2026-10-04T01:19:22+00:00",
+      "reachable": true,
+      "slug": "zapier-ai",
+      "source_metadata": {
+        "final_url": "https://zapier.com/ai",
+        "meta_description": "Add AI exactly where you need it — in a workflow, as an agent, or a customer chatbot — all in one unified orchestration platform.",
+        "status": 200,
+        "title": "Transform your operations with Zapier and AI"
+      },
+      "source_url": "https://zapier.com/ai",
+      "url": "https://zapier.com/ai"
+    }
+  ]
+}

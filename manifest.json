@@ -1,0 +1,248 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "slug": "chatgpt",
+      "source_url": "https://chatgpt.com/overview/",
+      "allowed_hosts": [
+        "chatgpt.com",
+        "openai.com"
+      ],
+      "url": "https://chatgpt.com/"
+    },
+    {
+      "slug": "claude",
+      "source_url": "https://claude.com/product/overview",
+      "allowed_hosts": [
+        "claude.com",
+        "www.anthropic.com"
+      ],
+      "url": "https://claude.ai/"
+    },
+    {
+      "slug": "gemini",
+      "source_url": "https://gemini.google/overview/",
+      "allowed_hosts": [
+        "gemini.google"
+      ],
+      "url": "https://gemini.google.com/"
+    },
+    {
+      "slug": "perplexity",
+      "source_url": "https://hub-prod.perplexity.ai/hub/faq/what-is-perplexity",
+      "allowed_hosts": [
+        "hub-prod.perplexity.ai"
+      ],
+      "url": "https://www.perplexity.ai/"
+    },
+    {
+      "slug": "microsoft-copilot",
+      "source_url": "https://www.microsoft.com/en-us/microsoft-copilot/for-individuals/",
+      "allowed_hosts": [
+        "www.microsoft.com"
+      ],
+      "url": "https://copilot.microsoft.com/"
+    },
+    {
+      "slug": "canva",
+      "source_url": "https://www.canva.com/newsroom/news/magic-studio/",
+      "allowed_hosts": [
+        "www.canva.com"
+      ],
+      "url": "https://www.canva.com/magic-studio/"
+    },
+    {
+      "slug": "adobe-firefly",
+      "source_url": "https://www.adobe.com/products/firefly.html",
+      "allowed_hosts": [
+        "www.adobe.com"
+      ],
+      "url": "https://firefly.adobe.com/"
+    },
+    {
+      "slug": "midjourney",
+      "source_url": "https://www.midjourney.com/",
+      "allowed_hosts": [
+        "www.midjourney.com"
+      ],
+      "url": "https://www.midjourney.com/"
+    },
+    {
+      "slug": "leonardo-ai",
+      "source_url": "https://leonardo.ai/",
+      "allowed_hosts": [
+        "leonardo.ai"
+      ],
+      "url": "https://leonardo.ai/"
+    },
+    {
+      "slug": "ideogram",
+      "source_url": "https://ideogram.ai/features/",
+      "allowed_hosts": [
+        "ideogram.ai"
+      ],
+      "url": "https://ideogram.ai/"
+    },
+    {
+      "slug": "runway",
+      "source_url": "https://runway.com/",
+      "allowed_hosts": [
+        "runway.com",
+        "runwayml.com"
+      ],
+      "url": "https://runway.com/"
+    },
+    {
+      "slug": "heygen",
+      "source_url": "https://www.heygen.com/",
+      "allowed_hosts": [
+        "www.heygen.com"
+      ],
+      "url": "https://www.heygen.com/"
+    },
+    {
+      "slug": "synthesia",
+      "source_url": "https://www.synthesia.io/",
+      "allowed_hosts": [
+        "www.synthesia.io"
+      ],
+      "url": "https://www.synthesia.io/"
+    },
+    {
+      "slug": "pika",
+      "source_url": "https://pika.art/",
+      "allowed_hosts": [
+        "pika.art"
+      ],
+      "url": "https://pika.art/"
+    },
+    {
+      "slug": "cursor",
+      "source_url": "https://cursor.com/",
+      "allowed_hosts": [
+        "cursor.com"
+      ],
+      "url": "https://cursor.com/"
+    },
+    {
+      "slug": "github-copilot",
+      "source_url": "https://github.com/features/copilot",
+      "allowed_hosts": [
+        "github.com"
+      ],
+      "url": "https://github.com/features/copilot"
+    },
+    {
+      "slug": "replit",
+      "source_url": "https://replit.com/products/agent",
+      "allowed_hosts": [
+        "replit.com"
+      ],
+      "url": "https://replit.com/products/agent"
+    },
+    {
+      "slug": "v0",
+      "source_url": "https://v0.app/",
+      "allowed_hosts": [
+        "v0.app"
+      ],
+      "url": "https://v0.app/"
+    },
+    {
+      "slug": "grammarly",
+      "source_url": "https://www.grammarly.com/ai",
+      "allowed_hosts": [
+        "www.grammarly.com"
+      ],
+      "url": "https://www.grammarly.com/"
+    },
+    {
+      "slug": "quillbot",
+      "source_url": "https://quillbot.com/",
+      "allowed_hosts": [
+        "quillbot.com"
+      ],
+      "url": "https://quillbot.com/"
+    },
+    {
+      "slug": "jasper",
+      "source_url": "https://www.jasper.ai/",
+      "allowed_hosts": [
+        "www.jasper.ai"
+      ],
+      "url": "https://www.jasper.ai/"
+    },
+    {
+      "slug": "elevenlabs",
+      "source_url": "https://elevenlabs.io/",
+      "allowed_hosts": [
+        "elevenlabs.io"
+      ],
+      "url": "https://elevenlabs.io/"
+    },
+    {
+      "slug": "suno",
+      "source_url": "https://suno.com/",
+      "allowed_hosts": [
+        "suno.com"
+      ],
+      "url": "https://suno.com/"
+    },
+    {
+      "slug": "adobe-podcast",
+      "source_url": "https://podcast.adobe.com/",
+      "allowed_hosts": [
+        "podcast.adobe.com"
+      ],
+      "url": "https://podcast.adobe.com/"
+    },
+    {
+      "slug": "notion-ai",
+      "source_url": "https://www.notion.com/product/ai",
+      "allowed_hosts": [
+        "www.notion.com"
+      ],
+      "url": "https://www.notion.com/product/ai"
+    },
+    {
+      "slug": "gamma",
+      "source_url": "https://gamma.app/",
+      "allowed_hosts": [
+        "gamma.app"
+      ],
+      "url": "https://gamma.app/"
+    },
+    {
+      "slug": "zapier-ai",
+      "source_url": "https://zapier.com/ai",
+      "allowed_hosts": [
+        "zapier.com"
+      ],
+      "url": "https://zapier.com/ai"
+    },
+    {
+      "slug": "notebooklm",
+      "source_url": "https://notebook.google/students?hl=tr",
+      "allowed_hosts": [
+        "notebook.google"
+      ],
+      "url": "https://notebook.google/"
+    },
+    {
+      "slug": "quizlet",
+      "source_url": "https://quizlet.com/features/ai-study-tools",
+      "allowed_hosts": [
+        "quizlet.com"
+      ],
+      "url": "https://quizlet.com/features/ai-study-tools"
+    },
+    {
+      "slug": "elicit",
+      "source_url": "https://elicit.com/",
+      "allowed_hosts": [
+        "elicit.com"
+      ],
+      "url": "https://elicit.com/"
+    }
+  ]
+}

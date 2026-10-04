@@ -8,7 +8,11 @@
         "chatgpt.com",
         "openai.com"
       ],
-      "url": "https://chatgpt.com/"
+      "url": "https://chatgpt.com/",
+      "media_hosts": [
+        "cdn.openai.com",
+        "images.ctfassets.net"
+      ]
     },
     {
       "slug": "claude",
@@ -17,7 +21,10 @@
         "claude.com",
         "www.anthropic.com"
       ],
-      "url": "https://claude.ai/"
+      "url": "https://claude.ai/",
+      "media_hosts": [
+        "assets.claude.com"
+      ]
     },
     {
       "slug": "gemini",
@@ -25,7 +32,8 @@
       "allowed_hosts": [
         "gemini.google"
       ],
-      "url": "https://gemini.google.com/"
+      "url": "https://gemini.google.com/",
+      "media_hosts": []
     },
     {
       "slug": "perplexity",
@@ -33,7 +41,8 @@
       "allowed_hosts": [
         "www.perplexity.ai"
       ],
-      "url": "https://www.perplexity.ai/"
+      "url": "https://www.perplexity.ai/",
+      "media_hosts": []
     },
     {
       "slug": "microsoft-copilot",
@@ -41,7 +50,11 @@
       "allowed_hosts": [
         "www.microsoft.com"
       ],
-      "url": "https://copilot.microsoft.com/"
+      "url": "https://copilot.microsoft.com/",
+      "media_hosts": [
+        "cdn-dynmedia-1.microsoft.com",
+        "uhf.microsoft.com"
+      ]
     },
     {
       "slug": "canva",
@@ -49,7 +62,11 @@
       "allowed_hosts": [
         "www.canva.com"
       ],
-      "url": "https://www.canva.com/magic-studio/"
+      "url": "https://www.canva.com/magic-studio/",
+      "media_hosts": [
+        "content-management-files.canva.com",
+        "static.canva.com"
+      ]
     },
     {
       "slug": "adobe-firefly",
@@ -57,7 +74,8 @@
       "allowed_hosts": [
         "www.adobe.com"
       ],
-      "url": "https://firefly.adobe.com/"
+      "url": "https://firefly.adobe.com/",
+      "media_hosts": []
     },
     {
       "slug": "midjourney",
@@ -65,7 +83,8 @@
       "allowed_hosts": [
         "www.midjourney.com"
       ],
-      "url": "https://www.midjourney.com/"
+      "url": "https://www.midjourney.com/",
+      "media_hosts": []
     },
     {
       "slug": "leonardo-ai",
@@ -73,7 +92,11 @@
       "allowed_hosts": [
         "leonardo.ai"
       ],
-      "url": "https://leonardo.ai/"
+      "url": "https://leonardo.ai/",
+      "media_hosts": [
+        "cdn.readme.io",
+        "files.readme.io"
+      ]
     },
     {
       "slug": "ideogram",
@@ -81,7 +104,10 @@
       "allowed_hosts": [
         "ideogram.ai"
       ],
-      "url": "https://ideogram.ai/"
+      "url": "https://ideogram.ai/",
+      "media_hosts": [
+        "storage.googleapis.com"
+      ]
     },
     {
       "slug": "runway",
@@ -90,7 +116,10 @@
         "runway.com",
         "runwayml.com"
       ],
-      "url": "https://runway.com/"
+      "url": "https://runway.com/",
+      "media_hosts": [
+        "d3phaj0sisr2ct.cloudfront.net"
+      ]
     },
     {
       "slug": "heygen",
@@ -98,7 +127,11 @@
       "allowed_hosts": [
         "www.heygen.com"
       ],
-      "url": "https://www.heygen.com/"
+      "url": "https://www.heygen.com/",
+      "media_hosts": [
+        "cdn.sanity.io",
+        "dynamic.heygen.ai"
+      ]
     },
     {
       "slug": "synthesia",
@@ -106,7 +139,10 @@
       "allowed_hosts": [
         "www.synthesia.io"
       ],
-      "url": "https://www.synthesia.io/"
+      "url": "https://www.synthesia.io/",
+      "media_hosts": [
+        "downloads.intercomcdn.com"
+      ]
     },
     {
       "slug": "pika",
@@ -114,7 +150,10 @@
       "allowed_hosts": [
         "pika.art"
       ],
-      "url": "https://pika.art/"
+      "url": "https://pika.art/",
+      "media_hosts": [
+        "cdn.pika.art"
+      ]
     },
     {
       "slug": "cursor",
@@ -122,7 +161,10 @@
       "allowed_hosts": [
         "cursor.com"
       ],
-      "url": "https://cursor.com/"
+      "url": "https://cursor.com/",
+      "media_hosts": [
+        "ptht05hbb1ssoooe.public.blob.vercel-storage.com"
+      ]
     },
     {
       "slug": "github-copilot",
@@ -130,7 +172,11 @@
       "allowed_hosts": [
         "github.com"
       ],
-      "url": "https://github.com/features/copilot"
+      "url": "https://github.com/features/copilot",
+      "media_hosts": [
+        "github.githubassets.com",
+        "images.ctfassets.net"
+      ]
     },
     {
       "slug": "replit",
@@ -138,7 +184,12 @@
       "allowed_hosts": [
         "replit.com"
       ],
-      "url": "https://replit.com/products/agent"
+      "url": "https://replit.com/products/agent",
+      "media_hosts": [
+        "cdn.replit.com",
+        "cdn.sanity.io",
+        "cdnimg.replit.com"
+      ]
     },
     {
       "slug": "v0",
@@ -146,7 +197,8 @@
       "allowed_hosts": [
         "v0.app"
       ],
-      "url": "https://v0.app/"
+      "url": "https://v0.app/",
+      "media_hosts": []
     },
     {
       "slug": "grammarly",
@@ -154,7 +206,10 @@
       "allowed_hosts": [
         "www.grammarly.com"
       ],
-      "url": "https://www.grammarly.com/"
+      "url": "https://www.grammarly.com/",
+      "media_hosts": [
+        "static-web.grammarly.com"
+      ]
     },
     {
       "slug": "quillbot",
@@ -162,7 +217,8 @@
       "allowed_hosts": [
         "quillbot.com"
       ],
-      "url": "https://quillbot.com/"
+      "url": "https://quillbot.com/",
+      "media_hosts": []
     },
     {
       "slug": "jasper",
@@ -170,7 +226,10 @@
       "allowed_hosts": [
         "www.jasper.ai"
       ],
-      "url": "https://www.jasper.ai/"
+      "url": "https://www.jasper.ai/",
+      "media_hosts": [
+        "cdn.prod.website-files.com"
+      ]
     },
     {
       "slug": "elevenlabs",
@@ -178,7 +237,10 @@
       "allowed_hosts": [
         "elevenlabs.io"
       ],
-      "url": "https://elevenlabs.io/"
+      "url": "https://elevenlabs.io/",
+      "media_hosts": [
+        "eleven-public-cdn.elevenlabs.io"
+      ]
     },
     {
       "slug": "suno",
@@ -186,7 +248,11 @@
       "allowed_hosts": [
         "suno.com"
       ],
-      "url": "https://suno.com/"
+      "url": "https://suno.com/",
+      "media_hosts": [
+        "cdn-o.suno.com",
+        "cdn2.suno.ai"
+      ]
     },
     {
       "slug": "adobe-podcast",
@@ -194,7 +260,8 @@
       "allowed_hosts": [
         "podcast.adobe.com"
       ],
-      "url": "https://podcast.adobe.com/"
+      "url": "https://podcast.adobe.com/",
+      "media_hosts": []
     },
     {
       "slug": "notion-ai",
@@ -202,7 +269,10 @@
       "allowed_hosts": [
         "www.notion.com"
       ],
-      "url": "https://www.notion.com/product/ai"
+      "url": "https://www.notion.com/product/ai",
+      "media_hosts": [
+        "images.ctfassets.net"
+      ]
     },
     {
       "slug": "gamma",
@@ -210,7 +280,10 @@
       "allowed_hosts": [
         "gamma.app"
       ],
-      "url": "https://gamma.app/"
+      "url": "https://gamma.app/",
+      "media_hosts": [
+        "downloads.intercomcdn.com"
+      ]
     },
     {
       "slug": "zapier-ai",
@@ -218,7 +291,12 @@
       "allowed_hosts": [
         "zapier.com"
       ],
-      "url": "https://zapier.com/ai"
+      "url": "https://zapier.com/ai",
+      "media_hosts": [
+        "cdn.zapier.com",
+        "images.ctfassets.net",
+        "res.cloudinary.com"
+      ]
     },
     {
       "slug": "notebooklm",
@@ -226,7 +304,8 @@
       "allowed_hosts": [
         "notebook.google"
       ],
-      "url": "https://notebook.google/"
+      "url": "https://notebook.google/",
+      "media_hosts": []
     },
     {
       "slug": "quizlet",
@@ -234,7 +313,8 @@
       "allowed_hosts": [
         "quizlet.com"
       ],
-      "url": "https://quizlet.com/features/ai-study-tools"
+      "url": "https://quizlet.com/features/ai-study-tools",
+      "media_hosts": []
     },
     {
       "slug": "elicit",
@@ -242,7 +322,10 @@
       "allowed_hosts": [
         "elicit.com"
       ],
-      "url": "https://elicit.com/"
+      "url": "https://elicit.com/",
+      "media_hosts": [
+        "framerusercontent.com"
+      ]
     }
   ]
 }

@@ -4,6 +4,8 @@ Bu klasör bağımsız [`zekaatlas-catalog-sync`](https://github.com/SalmanOz/ze
 
 Her gün 06:37 Türkiye saatiyle 30 resmi ürün kaynağı kontrol edilir ve Hugging Face'in herkese açık Spaces listesinden en fazla 10 yeni araç adayı alınır. Başlık, kısa açıklama, HTTP durumu ve kontrol zamanı bir batch oluşturur. Site gönderim ayarları tamamlandıysa batch imzalı olarak ZekâAtlas'a gönderilir; ayarlar eksikse workflow yalnız kontrol yapar. Çalıştırma elle de başlatılabilir. Günlük public metadata raporu `data/latest.json` dosyasına kaydedilir; dosya değiştiyse ayrı GitHub Actions işi bu tek dosyayı commit eder. Fiyatlar ve Türkçe editoryal açıklamalar kendiliğinden yeniden yazılmaz; yeni adaylar editör onayından önce yayımlanmaz.
 
+Resmi sayfanın favicon/apple-touch-icon bağlantısı ve Open Graph/Twitter görsel metadata'sı da izlenir. Yalnız manifest'teki tam `media_hosts` CDN izin listesi ve mevcut resmi kaynak hostları kabul edilir. URL çözümü, public DNS/IP sabitleme, robots ve redirect kontrollerinden sonra image MIME türü ve HTTP 200 erişimi `HEAD` ile doğrulanır; günlük workflow görsel dosyasını indirmez. Geçerli gözlem `source_metadata.media = {"logo_url": "https://...", "preview_image_url": "https://..."}` alanını kullanır; bulunmayan veya erişilemeyen anahtarlar atlanır. Yeni/izinsiz CDN adresi tüm batch'i bozmak yerine medya gözleminden çıkarılır. Site bu değişiklikleri yönetici incelemesine sunar; editörün seçtiği yerel logo ve kullanım görselinin üzerine yazmaz. Hugging Face'in mevcut public liste yanıtı thumbnail sağlamadığından keşif adaylarına uydurma görsel eklenmez.
+
 ## Kurulum
 
 1. Bu klasörün içeriğini ayrı bir GitHub reposunun köküne koy. `.github/workflows/catalog.yml` varsayılan dalda olmalı.
@@ -32,11 +34,14 @@ Gerçek gönderim için `INGEST_ENDPOINT` ve `INGEST_SECRET` ortam değişkenler
   "slug": "example-tool",
   "url": "https://example.com/",
   "source_url": "https://example.com/product",
-  "allowed_hosts": ["example.com"]
+  "allowed_hosts": ["example.com"],
+  "media_hosts": ["official-product-cdn.example"]
 }
 ```
 
 `url` katalogdaki resmi araç adresidir; `source_url` kontrol edilecek resmi bilgi sayfasıdır. Redirect'in geçeceği alan adları da açıkça `allowed_hosts` listesine eklenir. Wildcard ve alt alan adı eşleştirmesi yoktur. Liste run başına en fazla 40 kaynak içerir. Editör onayladığı yeni resmi ürün kaynağını buraya ekleyebilir; bilinmeyen slug siteye gönderildiğinde moderasyon kuyruğuna girer.
+
+Her araç için en fazla 10 `media_hosts` kaydı olabilir. Yeni medya hostu hem bu listede hem Laravel `media.allowed_hosts` listesinde doğrulanıp eklenmelidir. Sayfa HTML'sindeki keyfi dış bağlantılar kendiliğinden izin listesine alınmaz. İlk katalog görselleri `public/media/{slug}` altında PNG/WebP olarak sunulur; resmi SVG marka kaynakları aktif içerik/dış referans kontrolünden sonra rasterlaştırılmıştır. Bu yerel dosyalar scraper reposunda bulunmaz; scraper yalnız kaynak metadata'sı gözlemler.
 
 Varsayılan keşif bağlantısı yalnız [`GET https://huggingface.co/api/spaces?sort=trendingScore&direction=-1&limit=10`](https://huggingface.co/api/spaces?sort=trendingScore&direction=-1&limit=10) adresini okur. Güncel [Hub API belgeleri](https://huggingface.co/docs/hub/api) ve [Spaces listeleme referansı](https://huggingface.co/docs/huggingface_hub/en/package_reference/hf_api#huggingface_hub.HfApi.list_spaces) bu resmi public listeleme imkanını açıklar. Token, ücretli inference veya Space uygulaması çalıştırma kullanılmaz. Yanıtın en fazla 10 öğesi kabul edilir; `private`, `disabled` veya `gated` işaretli kayıtlar ve hata/durdurma runtime durumları atlanır. URL'ler API'nin keyfi bağlantılarından alınmaz, doğrulanmış `owner/space` kimliğinden yalnız `https://huggingface.co/spaces/owner/space` biçiminde üretilir. Slug `hf-` ile başlar ve en fazla 80 karakterdir. Yalnız varsa kısa card metadata açıklaması alınır; README ve diğer içeriklerin tamamı kopyalanmaz.
 
@@ -50,6 +55,7 @@ Site mevcut bir slug için yalnız kontrol metadata'sını günceller. Başlık 
 - Her DNS cevabı public IP olmalı. Bağlantı doğrulanan IP'ye sabitlenir ve TLS sertifikası resmi host adına göre doğrulanır. Private IP veya karışık public/private DNS cevabı reddedilir.
 - Redirect hedefi için de URL, host, DNS ve robots kontrolü yapılır. En fazla 3 redirect izlenir.
 - `robots.txt` izinleri, crawl-delay ve request-rate dikkate alınır. Robots 404 ise kamuya açık sayfa kontrolüne izin verilir; diğer robots erişim hatalarında kaynak kontrolü yapılmaz.
+- Yalnız editörün açıkça doğruladığı statik medya CDN'lerinde robots 400/403/410 yanıtı eksik dosya olarak değerlendirilir; [RFC9309 §2.3.1.3](https://www.rfc-editor.org/rfc/rfc9309.html#section-2.3.1.3) bu durumda public kaynağa erişime izin verir. Gerçek `Disallow` kuralları uygulanır; 401, 429, 5xx, ağ hatası veya robots yerine HTML challenge gelirse görsel kontrolü atlanır. Görselin kendisinin 403 yanıtı hiçbir şekilde aşılmaz. Kaynak sayfası taramasında bu CDN istisnası uygulanmaz.
 - Aynı host istekleri arasında en az 2 saniye, robots daha uzun süre isterse o süre beklenir. 120 saniyeden uzun delay bu sınırlı run'da atlanır.
 - İstek başına 15 saniye timeout ve 1 MiB yanıt limiti vardır. Sıkıştırılmış yanıtlar işlenmez.
 - Login, captcha, anti-bot ekranı ve JavaScript çalıştırma kullanılmaz. Görünen metnin tamamı kopyalanmaz; HTML title/meta description alınır.
@@ -75,7 +81,11 @@ Site mevcut bir slug için yalnız kontrol metadata'sını günceller. Başlık 
         "title": "Official product title",
         "meta_description": "Official short description",
         "status": 200,
-        "final_url": "https://example.com/product"
+        "final_url": "https://example.com/product",
+        "media": {
+          "logo_url": "https://official-product-cdn.example/logo.png",
+          "preview_image_url": "https://official-product-cdn.example/preview.webp"
+        }
       }
     }
   ]

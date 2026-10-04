@@ -111,7 +111,7 @@ class SafeHTTP:
             response = connection.getresponse()
             response_headers = {k.lower(): v for k, v in response.getheaders()}
             length = response_headers.get("content-length")
-            if length and int(length) > MAX_BODY_BYTES:
+            if method != "HEAD" and length and int(length) > MAX_BODY_BYTES:
                 raise FetchError("response_too_large")
             response_body = response.read(MAX_BODY_BYTES + 1)
             if len(response_body) > MAX_BODY_BYTES:
@@ -145,6 +145,8 @@ class MetadataParser(HTMLParser):
         self.title: list[str] = []
         self.description = ""
         self.og_description = ""
+        self.icons: list[str] = []
+        self.preview_images: list[str] = []
 
     def handle_starttag(self, tag, attrs):
         if tag.lower() == "title":
@@ -157,6 +159,14 @@ class MetadataParser(HTMLParser):
                 self.description = attributes.get("content", "")
             if prop == "og:description" and not self.og_description:
                 self.og_description = attributes.get("content", "")
+            if ((prop in ("og:image", "og:image:url") or name == "twitter:image")
+                    and len(self.preview_images) < 3):
+                self.preview_images.append(attributes.get("content", ""))
+        if tag.lower() == "link":
+            attributes = {k.lower(): v or "" for k, v in attrs}
+            if ({"icon", "apple-touch-icon", "mask-icon"} & set(
+                    attributes.get("rel", "").lower().split())) and len(self.icons) < 10:
+                self.icons.append(attributes.get("href", ""))
 
     def handle_endtag(self, tag):
         if tag.lower() == "title":
@@ -167,11 +177,27 @@ class MetadataParser(HTMLParser):
             self.title.append(data)
 
 
-def extract_metadata(html: str) -> dict[str, str]:
+def extract_metadata(html: str, source_url: str | None = None,
+                     media_hosts: set[str] | None = None) -> dict:
     parser = MetadataParser()
     parser.feed(html)
-    return {"title": clean_text("".join(parser.title), 300),
-            "meta_description": clean_text(parser.description or parser.og_description, 1000)}
+    metadata = {"title": clean_text("".join(parser.title), 300),
+                "meta_description": clean_text(parser.description or parser.og_description, 1000)}
+    if source_url and media_hosts:
+        media = {}
+        for key, candidates in (("logo_url", parser.icons),
+                                ("preview_image_url", parser.preview_images)):
+            for candidate in candidates:
+                if not candidate or len(candidate) > 2048:
+                    continue
+                try:
+                    media[key] = validate_url(urljoin(source_url, candidate), media_hosts)
+                    break
+                except FetchError:
+                    continue
+        if media:
+            metadata["media"] = media
+    return metadata
 
 
 class Crawler:
@@ -179,10 +205,10 @@ class Crawler:
         self.http = http
         self.robots: dict[tuple, RobotFileParser] = {}
 
-    def robots_allowed(self, url: str, hosts: set[str]) -> bool:
+    def robots_allowed(self, url: str, hosts: set[str], *, static_media: bool = False) -> bool:
         parts = urlsplit(validate_url(url, hosts))
         origin = "https://" + parts.hostname
-        cache_key = (origin, tuple(sorted(hosts)))
+        cache_key = (origin, tuple(sorted(hosts)), static_media)
         if cache_key not in self.robots:
             current = origin + "/robots.txt"
             for attempt in range(MAX_REDIRECTS + 1):
@@ -193,7 +219,13 @@ class Crawler:
                     raise FetchError("robots_redirect_limit")
                 current = validate_url(urljoin(current, response.headers["location"]), hosts)
             parser = RobotFileParser()
-            if response.status == 404:
+            if response.status == 404 or (static_media and response.status in (400, 403, 410)):
+                # RFC9309 2.3.1.3: unavailable robots files may allow public resources.
+                # Narrow this to curated image CDNs; source pages remain fail-closed.
+                if response.status != 404 and ("html" in response.headers.get(
+                        "content-type", "").lower() or response.body.lstrip().lower().startswith(
+                            (b"<html", b"<!doctype html"))):
+                    raise FetchError("robots_invalid_response")
                 parser.parse([])
             elif response.status == 200:
                 content_type = response.headers.get("content-type", "text/plain").lower()
@@ -211,6 +243,27 @@ class Crawler:
             self.http.host_delays[parts.hostname] = max(self.http.delay, delay)
             self.robots[cache_key] = parser
         return self.robots[cache_key].can_fetch(USER_AGENT, url)
+
+    def check_media(self, url: str, hosts: set[str], static_hosts: set[str] | None = None) -> str | None:
+        """Observe image availability with bounded HEAD requests, never download assets."""
+        current = url
+        try:
+            for attempt in range(MAX_REDIRECTS + 1):
+                current = validate_url(current, hosts)
+                if not self.robots_allowed(current, hosts, static_media=(
+                        urlsplit(current).hostname in (static_hosts or set()))):
+                    return None
+                response = self.http.request(current, hosts, method="HEAD",
+                                             headers={"Accept": "image/*"})
+                if response.status not in REDIRECT_STATUSES:
+                    return current if response.status == 200 and response.headers.get(
+                        "content-type", "").lower().startswith("image/") else None
+                if attempt == MAX_REDIRECTS or not response.headers.get("location"):
+                    return None
+                current = validate_url(urljoin(current, response.headers["location"]), hosts)
+        except FetchError:
+            return None
+        return None
 
     def check(self, entry: dict, checked_at: str) -> dict:
         observation = {"slug": entry["slug"], "url": entry["url"],
@@ -235,7 +288,15 @@ class Crawler:
                 raise FetchError("http_" + str(response.status))
             if "text/html" not in response.headers.get("content-type", "").lower():
                 raise FetchError("not_public_html")
-            metadata.update(extract_metadata(decode(response)))
+            media_hosts = hosts | set(entry.get("media_hosts", []))
+            extracted = extract_metadata(decode(response), current, media_hosts)
+            candidates = extracted.pop("media", {})
+            verified = {key: final for key, value in candidates.items()
+                        if (final := self.check_media(value, media_hosts,
+                                                     set(entry.get("media_hosts", []))))}
+            metadata.update(extracted)
+            if verified:
+                metadata["media"] = verified
             observation["reachable"] = True
         except FetchError as error:
             metadata["reason"] = clean_text(str(error), 500)
@@ -257,6 +318,14 @@ def load_manifest(path: Path, limit: int = MAX_SOURCES) -> list[dict]:
         entry["source_url"] = validate_url(entry["source_url"], hosts)
         entry["url"] = validate_url(entry["url"])
         entry["allowed_hosts"] = sorted(hosts)
+        media_hosts = {host.lower() for host in entry.get("media_hosts", [])}
+        if len(media_hosts) > 10:
+            raise ValueError("Use at most 10 explicit media hosts per source")
+        for host in media_hosts:
+            if urlsplit(validate_url("https://" + host)).hostname != host:
+                raise ValueError("Invalid media host")
+        if media_hosts:
+            entry["media_hosts"] = sorted(media_hosts)
         key = (entry["slug"], entry["source_url"])
         if key in unique and unique[key] != entry:
             raise ValueError("Conflicting duplicate source")

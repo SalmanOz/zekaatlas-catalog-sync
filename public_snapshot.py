@@ -55,6 +55,17 @@ def sanitize_report(report: dict, sources: list[dict]) -> dict:
             if not re.fullmatch(r'[a-z0-9_]{1,100}', raw['reason']):
                 raise ValueError('Unexpected non-public diagnostic value')
             metadata['reason'] = raw['reason']
+        if 'media' in raw:
+            media_hosts = set(entry['allowed_hosts']) | set(entry.get('media_hosts', []))
+            media = {}
+            for key in ('logo_url', 'preview_image_url'):
+                value = raw['media'].get(key)
+                if value is not None:
+                    if not isinstance(value, str) or len(value) > 2048 or is_discovery:
+                        raise ValueError('Unexpected discovery or invalid media URL')
+                    media[key] = validate_url(value, media_hosts)
+            if media:
+                metadata['media'] = media
         observations.append({'slug': entry['slug'], 'url': entry['url'],
                              'source_url': source_url, 'reachable': item['reachable'],
                              'checked_at': item['checked_at'], 'source_metadata': metadata})

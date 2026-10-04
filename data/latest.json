@@ -1,13 +1,16 @@
 {
-  "batch_id": "a0f996b3b203953869f0ca7045203d0bfba1096340f15880506e366e6b73435d",
-  "checked_at": "2026-10-04T01:35:14+00:00",
+  "batch_id": "2b4dd98be30d8afe06ed89947ea430567431cfcc76e9aa331f13df8bf750eb8d",
+  "checked_at": "2026-10-04T01:57:58+00:00",
   "observations": [
     {
-      "checked_at": "2026-10-04T01:35:14+00:00",
+      "checked_at": "2026-10-04T01:57:58+00:00",
       "reachable": true,
       "slug": "adobe-firefly",
       "source_metadata": {
         "final_url": "https://www.adobe.com/products/firefly.html",
+        "media": {
+          "preview_image_url": "https://www.adobe.com/products/media_1912d2dfb102c668252eb9dda176f925d677fc5e2.png?width=1200&format=pjpg&optimize=medium"
+        },
         "meta_description": "Create and edit images, audio, and video with Adobe Firefly’s Generative AI, plus try top models from Google, OpenAI, and more.",
         "status": 200,
         "title": "Adobe Firefly - Free Generative AI for Creatives"
@@ -16,45 +19,64 @@
       "url": "https://firefly.adobe.com/"
     },
     {
-      "checked_at": "2026-10-04T01:35:14+00:00",
-      "reachable": false,
+      "checked_at": "2026-10-04T01:57:58+00:00",
+      "reachable": true,
       "slug": "adobe-podcast",
       "source_metadata": {
-        "reason": "network_or_protocol_error"
+        "final_url": "https://podcast.adobe.com/",
+        "media": {
+          "logo_url": "https://podcast.adobe.com/adobe-podcast-favicon.svg"
+        },
+        "meta_description": "Next generation audio from Adobe is here. Record, transcribe, edit, share. Crisp and clear, every time.",
+        "status": 200,
+        "title": "Adobe Podcast | AI audio recording and editing, all on the web"
       },
       "source_url": "https://podcast.adobe.com/",
       "url": "https://podcast.adobe.com/"
     },
     {
-      "checked_at": "2026-10-04T01:35:14+00:00",
-      "reachable": false,
+      "checked_at": "2026-10-04T01:57:58+00:00",
+      "reachable": true,
       "slug": "canva",
       "source_metadata": {
         "final_url": "https://www.canva.com/newsroom/news/magic-studio/",
-        "reason": "http_403",
-        "status": 403
+        "media": {
+          "preview_image_url": "https://content-management-files.canva.com/fd7620d6-efc3-4b76-b4c7-24839f606139/NewsroomPost1_IntroducingMagicStudio_Thumbnail.png"
+        },
+        "meta_description": "We're excited to unveil the future of Canva with our most game-changing launch ever: Introducing Magic Studio. All the power of AI, all in one place.",
+        "status": 200,
+        "title": "Introducing Magic Studio: the power of AI, all in one place"
       },
       "source_url": "https://www.canva.com/newsroom/news/magic-studio/",
       "url": "https://www.canva.com/magic-studio/"
     },
     {
-      "checked_at": "2026-10-04T01:35:14+00:00",
-      "reachable": false,
+      "checked_at": "2026-10-04T01:57:58+00:00",
+      "reachable": true,
       "slug": "chatgpt",
       "source_metadata": {
         "final_url": "https://chatgpt.com/overview/",
-        "reason": "http_403",
-        "status": 403
+        "media": {
+          "logo_url": "https://chatgpt.com/favicon.ico",
+          "preview_image_url": "https://cdn.openai.com/chatgpt/share-og.png"
+        },
+        "meta_description": "ChatGPT helps you learn, create, and get things done. Ask questions, explore ideas, write content, analyze information, and more with AI.",
+        "status": 200,
+        "title": "Overview | ChatGPT"
       },
       "source_url": "https://chatgpt.com/overview/",
       "url": "https://chatgpt.com/"
     },
     {
-      "checked_at": "2026-10-04T01:35:14+00:00",
+      "checked_at": "2026-10-04T01:57:58+00:00",
       "reachable": true,
       "slug": "claude",
       "source_metadata": {
         "final_url": "https://claude.com/product/overview",
+        "media": {
+          "logo_url": "https://assets.claude.com/95a868946ac8a31e5ff832e2899f294aa368b836.png?w=32&h=32",
+          "preview_image_url": "https://assets.claude.com/0127845de9b30f0146d7d45c49049be8b749b158.jpg?w=1200&h=630&fit=crop"
+        },
         "meta_description": "Claude is the AI assistant for work. Hand off tasks, turn ideas into decks, spreadsheets and prototypes, and run scheduled tasks across your apps and files.",
         "status": 200,
         "title": "The AI for Problem Solvers | Claude by Anthropic"
@@ -63,11 +85,15 @@
       "url": "https://claude.ai/"
     },
     {
-      "checked_at": "2026-10-04T01:35:14+00:00",
+      "checked_at": "2026-10-04T01:57:58+00:00",
       "reachable": true,
       "slug": "cursor",
       "source_metadata": {
         "final_url": "https://cursor.com/",
+        "media": {
+          "logo_url": "https://cursor.com/marketing-static/favicon-light.ico",
+          "preview_image_url": "https://ptht05hbb1ssoooe.public.blob.vercel-storage.com/assets/og/opengraph-default.png"
+        },
         "meta_description": "Built to make you extraordinarily productive, agents turn ideas into code. Accelerate development by handing off tasks to Cursor.",
         "status": 200,
         "title": "AI Coding Agent for Building Ambitious Software | Cursor"
@@ -76,7 +102,7 @@
       "url": "https://cursor.com/"
     },
     {
-      "checked_at": "2026-10-04T01:35:14+00:00",
+      "checked_at": "2026-10-04T01:57:58+00:00",
       "reachable": false,
       "slug": "elevenlabs",
       "source_metadata": {
@@ -86,7 +112,7 @@
       "url": "https://elevenlabs.io/"
     },
     {
-      "checked_at": "2026-10-04T01:35:14+00:00",
+      "checked_at": "2026-10-04T01:57:58+00:00",
       "reachable": false,
       "slug": "elicit",
       "source_metadata": {
@@ -96,7 +122,7 @@
       "url": "https://elicit.com/"
     },
     {
-      "checked_at": "2026-10-04T01:35:14+00:00",
+      "checked_at": "2026-10-04T01:57:58+00:00",
       "reachable": false,
       "slug": "gamma",
       "source_metadata": {
@@ -106,24 +132,31 @@
       "url": "https://gamma.app/"
     },
     {
-      "checked_at": "2026-10-04T01:35:14+00:00",
+      "checked_at": "2026-10-04T01:57:58+00:00",
       "reachable": true,
       "slug": "gemini",
       "source_metadata": {
         "final_url": "https://gemini.google/overview/",
-        "meta_description": "Learn about Gemini: its capabilities, how it works, and its limitations. Explore Google's approach to AI, from model training to safety guidelines and future developments.",
+        "media": {
+          "logo_url": "https://gemini.google/images/spark_4c.png"
+        },
+        "meta_description": "Gemini'ın özellikleri, çalışma şekli ve sınırlamaları hakkında daha fazla bilgi edinin. Google'ın, model eğitiminden güvenlik yönergelerine ve gelecekte yapacağı yeniliklere kadar yapay zekayla ilgili yaklaşımını keşfedin.",
         "status": 200,
-        "title": "What is Gemini and how it works"
+        "title": "Gemini nedir ve nasıl çalışır?"
       },
       "source_url": "https://gemini.google/overview/",
       "url": "https://gemini.google.com/"
     },
     {
-      "checked_at": "2026-10-04T01:35:14+00:00",
+      "checked_at": "2026-10-04T01:57:58+00:00",
       "reachable": true,
       "slug": "github-copilot",
       "source_metadata": {
         "final_url": "https://github.com/features/copilot",
+        "media": {
+          "logo_url": "https://github.githubassets.com/assets/pinned-octocat-093da3e6fa40.svg",
+          "preview_image_url": "https://images.ctfassets.net/8aevphvgewt8/4KxWJH8PVVXdqBLs1V3UJ8/8926c7d150a8b8f3bf33c1c8a133724b/github-copilot-social-img.png"
+        },
         "meta_description": "GitHub Copilot works every step of the way, from an open issue to reviewing and merging a pull request. Use it in your editor, the terminal, on your desktop, and on GitHub.",
         "status": 200,
         "title": "GitHub Copilot · Your AI coding agent · GitHub · GitHubDuolingoFedExAmerican AirlinesShopifyStripeCocaColaCoyote LogisticsMercado LibreGeneral MotorsDuolingoFedExAmerican AirlinesShopifyStripeCocaColaCoyote LogisticsMercado LibreGeneral MotorsGitHubVisual StudioVS CodeXcodeJetBrainsNeovimEclipse IDE"
@@ -132,11 +165,15 @@
       "url": "https://github.com/features/copilot"
     },
     {
-      "checked_at": "2026-10-04T01:35:14+00:00",
+      "checked_at": "2026-10-04T01:57:58+00:00",
       "reachable": true,
       "slug": "grammarly",
       "source_metadata": {
         "final_url": "https://www.grammarly.com/ai",
+        "media": {
+          "logo_url": "https://static-web.grammarly.com/cms/master/public/favicon.ico",
+          "preview_image_url": "https://static-web.grammarly.com/1e6ajr2k4140/29NumtHXdXVK2me2tZqsw9/01bf3c02e517dbab08d0bbd034aebb54/Social_Share__14_.png"
+        },
         "meta_description": "Harness the power of Grammarly's AI to improve communication at work. Explore the leading AI communication assistant designed to help businesses of all sizes communicate clearly and collaborate efficiently.",
         "status": 200,
         "title": "Artificial Intelligence (AI) at GrammarlyGrammarly HomeGrammarly HomeGrammarly Home"
@@ -145,11 +182,15 @@
       "url": "https://www.grammarly.com/"
     },
     {
-      "checked_at": "2026-10-04T01:35:14+00:00",
+      "checked_at": "2026-10-04T01:57:58+00:00",
       "reachable": true,
       "slug": "heygen",
       "source_metadata": {
         "final_url": "https://www.heygen.com/",
+        "media": {
+          "logo_url": "https://www.heygen.com/favicon.ico?favicon.2m321y0geyyfh.ico",
+          "preview_image_url": "https://cdn.sanity.io/images/pdhqcmb1/production/579e83ff34c4c832744efaedb9681d255e58dc13-1200x630.png?fit=max&fm=png"
+        },
         "meta_description": "Create AI videos from your ideas using HeyGen. Input text, image, or audio to create complete videos with narration, captions, visuals, and animations.",
         "status": 200,
         "title": "HeyGen: Create Realistic AI Videos of Yourself in MinutesBack to main menu"
@@ -158,7 +199,7 @@
       "url": "https://www.heygen.com/"
     },
     {
-      "checked_at": "2026-10-04T01:35:14+00:00",
+      "checked_at": "2026-10-04T01:57:58+00:00",
       "reachable": true,
       "slug": "hf-arudradey-qwen-image-2-1-uncensored-aio-loras",
       "source_metadata": {
@@ -171,7 +212,7 @@
       "url": "https://huggingface.co/spaces/arudradey/qwen-image-2.1-uncensored-aio-loras"
     },
     {
-      "checked_at": "2026-10-04T01:35:14+00:00",
+      "checked_at": "2026-10-04T01:57:58+00:00",
       "reachable": true,
       "slug": "hf-arudradey-qwen-image-2-1-uncensored-gguf",
       "source_metadata": {
@@ -184,7 +225,7 @@
       "url": "https://huggingface.co/spaces/arudradey/qwen-image-2.1-uncensored-gguf"
     },
     {
-      "checked_at": "2026-10-04T01:35:14+00:00",
+      "checked_at": "2026-10-04T01:57:58+00:00",
       "reachable": true,
       "slug": "hf-fineenvs-multi-harness-rl",
       "source_metadata": {
@@ -197,7 +238,7 @@
       "url": "https://huggingface.co/spaces/FineEnvs/multi-harness-rl"
     },
     {
-      "checked_at": "2026-10-04T01:35:14+00:00",
+      "checked_at": "2026-10-04T01:57:58+00:00",
       "reachable": true,
       "slug": "hf-jackiesixnine-krea-2-turbo-v2",
       "source_metadata": {
@@ -210,20 +251,7 @@
       "url": "https://huggingface.co/spaces/Jackiesixnine/Krea-2-Turbo_v2"
     },
     {
-      "checked_at": "2026-10-04T01:35:14+00:00",
-      "reachable": true,
-      "slug": "hf-kulkas2pintu-qwen-edit-image",
-      "source_metadata": {
-        "meta_description": "Hugging Face üzerinde sunulan herkese açık bir gradio demosu. Yayına alınmadan önce editör incelemesi gerekir.",
-        "reason": "discovered_from_huggingface_api",
-        "status": 200,
-        "title": "Hugging Face: kulkas2pintu/QWEN_EDIT_IMAGE"
-      },
-      "source_url": "https://huggingface.co/spaces/kulkas2pintu/QWEN_EDIT_IMAGE",
-      "url": "https://huggingface.co/spaces/kulkas2pintu/QWEN_EDIT_IMAGE"
-    },
-    {
-      "checked_at": "2026-10-04T01:35:14+00:00",
+      "checked_at": "2026-10-04T01:57:58+00:00",
       "reachable": true,
       "slug": "hf-kulkas2pintu-wan777",
       "source_metadata": {
@@ -236,7 +264,7 @@
       "url": "https://huggingface.co/spaces/kulkas2pintu/wan777"
     },
     {
-      "checked_at": "2026-10-04T01:35:14+00:00",
+      "checked_at": "2026-10-04T01:57:58+00:00",
       "reachable": true,
       "slug": "hf-multimodalart-jev-decision-index",
       "source_metadata": {
@@ -249,7 +277,7 @@
       "url": "https://huggingface.co/spaces/multimodalart/jev-decision-index"
     },
     {
-      "checked_at": "2026-10-04T01:35:14+00:00",
+      "checked_at": "2026-10-04T01:57:58+00:00",
       "reachable": true,
       "slug": "hf-pepe104-minimax-h3-turbo-lora-uncensored",
       "source_metadata": {
@@ -262,7 +290,7 @@
       "url": "https://huggingface.co/spaces/Pepe104/MiniMax-H3-Turbo-Lora-UNCENSORED"
     },
     {
-      "checked_at": "2026-10-04T01:35:14+00:00",
+      "checked_at": "2026-10-04T01:57:58+00:00",
       "reachable": true,
       "slug": "hf-qwen-qwen-image-2-1",
       "source_metadata": {
@@ -275,7 +303,7 @@
       "url": "https://huggingface.co/spaces/Qwen/Qwen-Image-2.1"
     },
     {
-      "checked_at": "2026-10-04T01:35:14+00:00",
+      "checked_at": "2026-10-04T01:57:58+00:00",
       "reachable": true,
       "slug": "hf-viggle-qwen-image-2-1-viggle-turbo",
       "source_metadata": {
@@ -288,11 +316,28 @@
       "url": "https://huggingface.co/spaces/Viggle/Qwen-Image-2.1-viggle-turbo"
     },
     {
-      "checked_at": "2026-10-04T01:35:14+00:00",
+      "checked_at": "2026-10-04T01:57:58+00:00",
+      "reachable": true,
+      "slug": "hf-zai-org-openvuln",
+      "source_metadata": {
+        "meta_description": "Hugging Face üzerinde sunulan herkese açık bir docker demosu. Yayına alınmadan önce editör incelemesi gerekir.",
+        "reason": "discovered_from_huggingface_api",
+        "status": 200,
+        "title": "Hugging Face: zai-org/OpenVuln"
+      },
+      "source_url": "https://huggingface.co/spaces/zai-org/OpenVuln",
+      "url": "https://huggingface.co/spaces/zai-org/OpenVuln"
+    },
+    {
+      "checked_at": "2026-10-04T01:57:58+00:00",
       "reachable": true,
       "slug": "ideogram",
       "source_metadata": {
         "final_url": "https://ideogram.ai/features/",
+        "media": {
+          "logo_url": "https://ideogram.ai/favicon.ico",
+          "preview_image_url": "https://storage.googleapis.com/ideogram-static/website/images/ba16d402d8d0b906.jpeg"
+        },
         "meta_description": "Redirect page for Ideogram feature routing, which now resolves from the homepage.",
         "status": 200,
         "title": "Ideogram Features — Ideogram"
@@ -301,7 +346,7 @@
       "url": "https://ideogram.ai/"
     },
     {
-      "checked_at": "2026-10-04T01:35:14+00:00",
+      "checked_at": "2026-10-04T01:57:58+00:00",
       "reachable": true,
       "slug": "jasper",
       "source_metadata": {
@@ -314,7 +359,7 @@
       "url": "https://www.jasper.ai/"
     },
     {
-      "checked_at": "2026-10-04T01:35:14+00:00",
+      "checked_at": "2026-10-04T01:57:58+00:00",
       "reachable": false,
       "slug": "leonardo-ai",
       "source_metadata": {
@@ -326,11 +371,14 @@
       "url": "https://leonardo.ai/"
     },
     {
-      "checked_at": "2026-10-04T01:35:14+00:00",
+      "checked_at": "2026-10-04T01:57:58+00:00",
       "reachable": true,
       "slug": "microsoft-copilot",
       "source_metadata": {
         "final_url": "https://www.microsoft.com/en-us/copilot/solutions/individuals",
+        "media": {
+          "logo_url": "https://www.microsoft.com/favicon.ico?v2"
+        },
         "meta_description": "Create, organize, and move faster with Copilot in your favorite apps like Word, Excel, and PowerPoint. Explore Microsoft 365 plans for work and life.",
         "status": 200,
         "title": "Microsoft Copilot Plans for Individuals | Microsoft 365Your Privacy Choices Opt-Out IconYour Privacy Choices Opt-Out Icon"
@@ -339,7 +387,7 @@
       "url": "https://copilot.microsoft.com/"
     },
     {
-      "checked_at": "2026-10-04T01:35:14+00:00",
+      "checked_at": "2026-10-04T01:57:58+00:00",
       "reachable": false,
       "slug": "midjourney",
       "source_metadata": {
@@ -349,21 +397,32 @@
       "url": "https://www.midjourney.com/"
     },
     {
-      "checked_at": "2026-10-04T01:35:14+00:00",
-      "reachable": false,
+      "checked_at": "2026-10-04T01:57:58+00:00",
+      "reachable": true,
       "slug": "notebooklm",
       "source_metadata": {
-        "reason": "network_or_protocol_error"
+        "final_url": "https://notebook.google/students?hl=tr",
+        "media": {
+          "logo_url": "https://notebook.google/_/static/branding/v6/light_mode/favicon/favicon.svg",
+          "preview_image_url": "https://notebook.google/_/static/branding/v6/og/notebook_lm_share.png"
+        },
+        "meta_description": "Öğrencilere özel yapay zeka aracı Gemini Notebook ile ders notlarını özetleyin, çalışma kılavuzları oluşturun, yeni konuları hızla kavrayın ve daha etkili ders çalışın.",
+        "status": 200,
+        "title": "Gemini Notebook | Öğrenciler İçin Yapay Zeka Destekli Ders Çalışma Aracı"
       },
       "source_url": "https://notebook.google/students?hl=tr",
       "url": "https://notebook.google/"
     },
     {
-      "checked_at": "2026-10-04T01:35:14+00:00",
+      "checked_at": "2026-10-04T01:57:58+00:00",
       "reachable": true,
       "slug": "notion-ai",
       "source_metadata": {
         "final_url": "https://www.notion.com/product/ai",
+        "media": {
+          "logo_url": "https://www.notion.com/front-static/favicon.ico",
+          "preview_image_url": "https://www.notion.com/front-static/meta/global-evergreen-01.png"
+        },
         "meta_description": "One tool that does it all. Search, generate, analyze, and chat—right inside Notion.",
         "status": 200,
         "title": "Meet your AI team | Notion"
@@ -372,7 +431,7 @@
       "url": "https://www.notion.com/product/ai"
     },
     {
-      "checked_at": "2026-10-04T01:35:14+00:00",
+      "checked_at": "2026-10-04T01:57:58+00:00",
       "reachable": false,
       "slug": "perplexity",
       "source_metadata": {
@@ -384,11 +443,15 @@
       "url": "https://www.perplexity.ai/"
     },
     {
-      "checked_at": "2026-10-04T01:35:14+00:00",
+      "checked_at": "2026-10-04T01:57:58+00:00",
       "reachable": true,
       "slug": "pika",
       "source_metadata": {
         "final_url": "https://pika.art/",
+        "media": {
+          "logo_url": "https://pika.art/favicon.ico?favicon.03qzqgaru0by8.ico",
+          "preview_image_url": "https://pika.art/brand/opengraph.png"
+        },
         "meta_description": "AI creative tools. Built for Creatives.",
         "status": 200,
         "title": "PikaPika"
@@ -397,7 +460,7 @@
       "url": "https://pika.art/"
     },
     {
-      "checked_at": "2026-10-04T01:35:14+00:00",
+      "checked_at": "2026-10-04T01:57:58+00:00",
       "reachable": false,
       "slug": "quillbot",
       "source_metadata": {
@@ -407,21 +470,27 @@
       "url": "https://quillbot.com/"
     },
     {
-      "checked_at": "2026-10-04T01:35:14+00:00",
+      "checked_at": "2026-10-04T01:57:58+00:00",
       "reachable": false,
       "slug": "quizlet",
       "source_metadata": {
-        "reason": "robots_unavailable"
+        "final_url": "https://quizlet.com/features/ai-study-tools",
+        "reason": "http_403",
+        "status": 403
       },
       "source_url": "https://quizlet.com/features/ai-study-tools",
       "url": "https://quizlet.com/features/ai-study-tools"
     },
     {
-      "checked_at": "2026-10-04T01:35:14+00:00",
+      "checked_at": "2026-10-04T01:57:58+00:00",
       "reachable": true,
       "slug": "replit",
       "source_metadata": {
         "final_url": "https://replit.com/products/agent",
+        "media": {
+          "logo_url": "https://cdn.replit.com/dotcom/favicon-rb-48.png",
+          "preview_image_url": "https://cdn.sanity.io/images/bj34pdbp/migration/f957e195237fea65362557c1d7d299df89f5348d-1200x650.jpg?auto=format&q=75&w=1200&format=png"
+        },
         "meta_description": "Build production-ready apps and websites with Replit Agent. Describe what you need, then let AI write, test, fix, and publish your software.",
         "status": 200,
         "title": "AI Coding Agent: Build Apps Through Chat | Replit"
@@ -430,7 +499,7 @@
       "url": "https://replit.com/products/agent"
     },
     {
-      "checked_at": "2026-10-04T01:35:14+00:00",
+      "checked_at": "2026-10-04T01:57:58+00:00",
       "reachable": false,
       "slug": "runway",
       "source_metadata": {
@@ -440,11 +509,15 @@
       "url": "https://runway.com/"
     },
     {
-      "checked_at": "2026-10-04T01:35:14+00:00",
+      "checked_at": "2026-10-04T01:57:58+00:00",
       "reachable": true,
       "slug": "suno",
       "source_metadata": {
         "final_url": "https://suno.com/",
+        "media": {
+          "logo_url": "https://cdn-o.suno.com/favicon.ico",
+          "preview_image_url": "https://cdn-o.suno.com/meta-preview.jpg"
+        },
         "meta_description": "Create stunning original music for free in seconds using our AI generator. Make your own masterpieces, share with friends, and discover music from artists worldwide.",
         "status": 200,
         "title": "Suno | AI Music Generator"
@@ -453,7 +526,7 @@
       "url": "https://suno.com/"
     },
     {
-      "checked_at": "2026-10-04T01:35:14+00:00",
+      "checked_at": "2026-10-04T01:57:58+00:00",
       "reachable": true,
       "slug": "synthesia",
       "source_metadata": {
@@ -466,7 +539,7 @@
       "url": "https://www.synthesia.io/"
     },
     {
-      "checked_at": "2026-10-04T01:35:14+00:00",
+      "checked_at": "2026-10-04T01:57:58+00:00",
       "reachable": false,
       "slug": "v0",
       "source_metadata": {
@@ -476,11 +549,15 @@
       "url": "https://v0.app/"
     },
     {
-      "checked_at": "2026-10-04T01:35:14+00:00",
+      "checked_at": "2026-10-04T01:57:58+00:00",
       "reachable": true,
       "slug": "zapier-ai",
       "source_metadata": {
         "final_url": "https://zapier.com/ai",
+        "media": {
+          "logo_url": "https://zapier.com/favicon.ico",
+          "preview_image_url": "https://res.cloudinary.com/zapier-media/image/upload/q_auto/f_auto/v1776210704/Governance/og-image-ai_mroshs.png"
+        },
         "meta_description": "Add AI exactly where you need it — in a workflow, as an agent, or a customer chatbot — all in one unified orchestration platform.",
         "status": 200,
         "title": "Transform your operations with Zapier and AI"

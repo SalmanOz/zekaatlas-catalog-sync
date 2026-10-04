@@ -1,9 +1,9 @@
 {
-  "batch_id": "2b4dd98be30d8afe06ed89947ea430567431cfcc76e9aa331f13df8bf750eb8d",
-  "checked_at": "2026-10-04T01:57:58+00:00",
+  "batch_id": "b40439218be28630280e51cee492e7df21d351e4de64d92034c92fb246aed7b8",
+  "checked_at": "2026-10-04T02:07:28+00:00",
   "observations": [
     {
-      "checked_at": "2026-10-04T01:57:58+00:00",
+      "checked_at": "2026-10-04T02:07:28+00:00",
       "reachable": true,
       "slug": "adobe-firefly",
       "source_metadata": {
@@ -19,7 +19,7 @@
       "url": "https://firefly.adobe.com/"
     },
     {
-      "checked_at": "2026-10-04T01:57:58+00:00",
+      "checked_at": "2026-10-04T02:07:28+00:00",
       "reachable": true,
       "slug": "adobe-podcast",
       "source_metadata": {
@@ -35,40 +35,31 @@
       "url": "https://podcast.adobe.com/"
     },
     {
-      "checked_at": "2026-10-04T01:57:58+00:00",
-      "reachable": true,
+      "checked_at": "2026-10-04T02:07:28+00:00",
+      "reachable": false,
       "slug": "canva",
       "source_metadata": {
         "final_url": "https://www.canva.com/newsroom/news/magic-studio/",
-        "media": {
-          "preview_image_url": "https://content-management-files.canva.com/fd7620d6-efc3-4b76-b4c7-24839f606139/NewsroomPost1_IntroducingMagicStudio_Thumbnail.png"
-        },
-        "meta_description": "We're excited to unveil the future of Canva with our most game-changing launch ever: Introducing Magic Studio. All the power of AI, all in one place.",
-        "status": 200,
-        "title": "Introducing Magic Studio: the power of AI, all in one place"
+        "reason": "http_403",
+        "status": 403
       },
       "source_url": "https://www.canva.com/newsroom/news/magic-studio/",
       "url": "https://www.canva.com/magic-studio/"
     },
     {
-      "checked_at": "2026-10-04T01:57:58+00:00",
-      "reachable": true,
+      "checked_at": "2026-10-04T02:07:28+00:00",
+      "reachable": false,
       "slug": "chatgpt",
       "source_metadata": {
         "final_url": "https://chatgpt.com/overview/",
-        "media": {
-          "logo_url": "https://chatgpt.com/favicon.ico",
-          "preview_image_url": "https://cdn.openai.com/chatgpt/share-og.png"
-        },
-        "meta_description": "ChatGPT helps you learn, create, and get things done. Ask questions, explore ideas, write content, analyze information, and more with AI.",
-        "status": 200,
-        "title": "Overview | ChatGPT"
+        "reason": "http_403",
+        "status": 403
       },
       "source_url": "https://chatgpt.com/overview/",
       "url": "https://chatgpt.com/"
     },
     {
-      "checked_at": "2026-10-04T01:57:58+00:00",
+      "checked_at": "2026-10-04T02:07:28+00:00",
       "reachable": true,
       "slug": "claude",
       "source_metadata": {
@@ -85,7 +76,7 @@
       "url": "https://claude.ai/"
     },
     {
-      "checked_at": "2026-10-04T01:57:58+00:00",
+      "checked_at": "2026-10-04T02:07:28+00:00",
       "reachable": true,
       "slug": "cursor",
       "source_metadata": {
@@ -102,7 +93,7 @@
       "url": "https://cursor.com/"
     },
     {
-      "checked_at": "2026-10-04T01:57:58+00:00",
+      "checked_at": "2026-10-04T02:07:28+00:00",
       "reachable": false,
       "slug": "elevenlabs",
       "source_metadata": {
@@ -112,7 +103,7 @@
       "url": "https://elevenlabs.io/"
     },
     {
-      "checked_at": "2026-10-04T01:57:58+00:00",
+      "checked_at": "2026-10-04T02:07:28+00:00",
       "reachable": false,
       "slug": "elicit",
       "source_metadata": {
@@ -122,7 +113,7 @@
       "url": "https://elicit.com/"
     },
     {
-      "checked_at": "2026-10-04T01:57:58+00:00",
+      "checked_at": "2026-10-04T02:07:28+00:00",
       "reachable": false,
       "slug": "gamma",
       "source_metadata": {
@@ -132,7 +123,7 @@
       "url": "https://gamma.app/"
     },
     {
-      "checked_at": "2026-10-04T01:57:58+00:00",
+      "checked_at": "2026-10-04T02:07:28+00:00",
       "reachable": true,
       "slug": "gemini",
       "source_metadata": {
@@ -140,15 +131,15 @@
         "media": {
           "logo_url": "https://gemini.google/images/spark_4c.png"
         },
-        "meta_description": "Gemini'ın özellikleri, çalışma şekli ve sınırlamaları hakkında daha fazla bilgi edinin. Google'ın, model eğitiminden güvenlik yönergelerine ve gelecekte yapacağı yeniliklere kadar yapay zekayla ilgili yaklaşımını keşfedin.",
+        "meta_description": "Learn about Gemini: its capabilities, how it works, and its limitations. Explore Google's approach to AI, from model training to safety guidelines and future developments.",
         "status": 200,
-        "title": "Gemini nedir ve nasıl çalışır?"
+        "title": "What is Gemini and how it works"
       },
       "source_url": "https://gemini.google/overview/",
       "url": "https://gemini.google.com/"
     },
     {
-      "checked_at": "2026-10-04T01:57:58+00:00",
+      "checked_at": "2026-10-04T02:07:28+00:00",
       "reachable": true,
       "slug": "github-copilot",
       "source_metadata": {
@@ -165,7 +156,7 @@
       "url": "https://github.com/features/copilot"
     },
     {
-      "checked_at": "2026-10-04T01:57:58+00:00",
+      "checked_at": "2026-10-04T02:07:28+00:00",
       "reachable": true,
       "slug": "grammarly",
       "source_metadata": {
@@ -182,7 +173,7 @@
       "url": "https://www.grammarly.com/"
     },
     {
-      "checked_at": "2026-10-04T01:57:58+00:00",
+      "checked_at": "2026-10-04T02:07:28+00:00",
       "reachable": true,
       "slug": "heygen",
       "source_metadata": {
@@ -199,137 +190,7 @@
       "url": "https://www.heygen.com/"
     },
     {
-      "checked_at": "2026-10-04T01:57:58+00:00",
-      "reachable": true,
-      "slug": "hf-arudradey-qwen-image-2-1-uncensored-aio-loras",
-      "source_metadata": {
-        "meta_description": "Hugging Face üzerinde sunulan herkese açık bir gradio demosu. Yayına alınmadan önce editör incelemesi gerekir.",
-        "reason": "discovered_from_huggingface_api",
-        "status": 200,
-        "title": "Hugging Face: arudradey/qwen-image-2.1-uncensored-aio-loras"
-      },
-      "source_url": "https://huggingface.co/spaces/arudradey/qwen-image-2.1-uncensored-aio-loras",
-      "url": "https://huggingface.co/spaces/arudradey/qwen-image-2.1-uncensored-aio-loras"
-    },
-    {
-      "checked_at": "2026-10-04T01:57:58+00:00",
-      "reachable": true,
-      "slug": "hf-arudradey-qwen-image-2-1-uncensored-gguf",
-      "source_metadata": {
-        "meta_description": "Hugging Face üzerinde sunulan herkese açık bir gradio demosu. Yayına alınmadan önce editör incelemesi gerekir.",
-        "reason": "discovered_from_huggingface_api",
-        "status": 200,
-        "title": "Hugging Face: arudradey/qwen-image-2.1-uncensored-gguf"
-      },
-      "source_url": "https://huggingface.co/spaces/arudradey/qwen-image-2.1-uncensored-gguf",
-      "url": "https://huggingface.co/spaces/arudradey/qwen-image-2.1-uncensored-gguf"
-    },
-    {
-      "checked_at": "2026-10-04T01:57:58+00:00",
-      "reachable": true,
-      "slug": "hf-fineenvs-multi-harness-rl",
-      "source_metadata": {
-        "meta_description": "Hugging Face üzerinde sunulan herkese açık bir docker demosu. Yayına alınmadan önce editör incelemesi gerekir.",
-        "reason": "discovered_from_huggingface_api",
-        "status": 200,
-        "title": "Hugging Face: FineEnvs/multi-harness-rl"
-      },
-      "source_url": "https://huggingface.co/spaces/FineEnvs/multi-harness-rl",
-      "url": "https://huggingface.co/spaces/FineEnvs/multi-harness-rl"
-    },
-    {
-      "checked_at": "2026-10-04T01:57:58+00:00",
-      "reachable": true,
-      "slug": "hf-jackiesixnine-krea-2-turbo-v2",
-      "source_metadata": {
-        "meta_description": "Hugging Face üzerinde sunulan herkese açık bir gradio demosu. Yayına alınmadan önce editör incelemesi gerekir.",
-        "reason": "discovered_from_huggingface_api",
-        "status": 200,
-        "title": "Hugging Face: Jackiesixnine/Krea-2-Turbo_v2"
-      },
-      "source_url": "https://huggingface.co/spaces/Jackiesixnine/Krea-2-Turbo_v2",
-      "url": "https://huggingface.co/spaces/Jackiesixnine/Krea-2-Turbo_v2"
-    },
-    {
-      "checked_at": "2026-10-04T01:57:58+00:00",
-      "reachable": true,
-      "slug": "hf-kulkas2pintu-wan777",
-      "source_metadata": {
-        "meta_description": "Hugging Face üzerinde sunulan herkese açık bir gradio demosu. Yayına alınmadan önce editör incelemesi gerekir.",
-        "reason": "discovered_from_huggingface_api",
-        "status": 200,
-        "title": "Hugging Face: kulkas2pintu/wan777"
-      },
-      "source_url": "https://huggingface.co/spaces/kulkas2pintu/wan777",
-      "url": "https://huggingface.co/spaces/kulkas2pintu/wan777"
-    },
-    {
-      "checked_at": "2026-10-04T01:57:58+00:00",
-      "reachable": true,
-      "slug": "hf-multimodalart-jev-decision-index",
-      "source_metadata": {
-        "meta_description": "Hugging Face üzerinde sunulan herkese açık bir static demosu. Yayına alınmadan önce editör incelemesi gerekir.",
-        "reason": "discovered_from_huggingface_api",
-        "status": 200,
-        "title": "Hugging Face: multimodalart/jev-decision-index"
-      },
-      "source_url": "https://huggingface.co/spaces/multimodalart/jev-decision-index",
-      "url": "https://huggingface.co/spaces/multimodalart/jev-decision-index"
-    },
-    {
-      "checked_at": "2026-10-04T01:57:58+00:00",
-      "reachable": true,
-      "slug": "hf-pepe104-minimax-h3-turbo-lora-uncensored",
-      "source_metadata": {
-        "meta_description": "Hugging Face üzerinde sunulan herkese açık bir gradio demosu. Yayına alınmadan önce editör incelemesi gerekir.",
-        "reason": "discovered_from_huggingface_api",
-        "status": 200,
-        "title": "Hugging Face: Pepe104/MiniMax-H3-Turbo-Lora-UNCENSORED"
-      },
-      "source_url": "https://huggingface.co/spaces/Pepe104/MiniMax-H3-Turbo-Lora-UNCENSORED",
-      "url": "https://huggingface.co/spaces/Pepe104/MiniMax-H3-Turbo-Lora-UNCENSORED"
-    },
-    {
-      "checked_at": "2026-10-04T01:57:58+00:00",
-      "reachable": true,
-      "slug": "hf-qwen-qwen-image-2-1",
-      "source_metadata": {
-        "meta_description": "Hugging Face üzerinde sunulan herkese açık bir gradio demosu. Yayına alınmadan önce editör incelemesi gerekir.",
-        "reason": "discovered_from_huggingface_api",
-        "status": 200,
-        "title": "Hugging Face: Qwen/Qwen-Image-2.1"
-      },
-      "source_url": "https://huggingface.co/spaces/Qwen/Qwen-Image-2.1",
-      "url": "https://huggingface.co/spaces/Qwen/Qwen-Image-2.1"
-    },
-    {
-      "checked_at": "2026-10-04T01:57:58+00:00",
-      "reachable": true,
-      "slug": "hf-viggle-qwen-image-2-1-viggle-turbo",
-      "source_metadata": {
-        "meta_description": "Hugging Face üzerinde sunulan herkese açık bir gradio demosu. Yayına alınmadan önce editör incelemesi gerekir.",
-        "reason": "discovered_from_huggingface_api",
-        "status": 200,
-        "title": "Hugging Face: Viggle/Qwen-Image-2.1-viggle-turbo"
-      },
-      "source_url": "https://huggingface.co/spaces/Viggle/Qwen-Image-2.1-viggle-turbo",
-      "url": "https://huggingface.co/spaces/Viggle/Qwen-Image-2.1-viggle-turbo"
-    },
-    {
-      "checked_at": "2026-10-04T01:57:58+00:00",
-      "reachable": true,
-      "slug": "hf-zai-org-openvuln",
-      "source_metadata": {
-        "meta_description": "Hugging Face üzerinde sunulan herkese açık bir docker demosu. Yayına alınmadan önce editör incelemesi gerekir.",
-        "reason": "discovered_from_huggingface_api",
-        "status": 200,
-        "title": "Hugging Face: zai-org/OpenVuln"
-      },
-      "source_url": "https://huggingface.co/spaces/zai-org/OpenVuln",
-      "url": "https://huggingface.co/spaces/zai-org/OpenVuln"
-    },
-    {
-      "checked_at": "2026-10-04T01:57:58+00:00",
+      "checked_at": "2026-10-04T02:07:28+00:00",
       "reachable": true,
       "slug": "ideogram",
       "source_metadata": {
@@ -346,11 +207,15 @@
       "url": "https://ideogram.ai/"
     },
     {
-      "checked_at": "2026-10-04T01:57:58+00:00",
+      "checked_at": "2026-10-04T02:07:28+00:00",
       "reachable": true,
       "slug": "jasper",
       "source_metadata": {
         "final_url": "https://www.jasper.ai/",
+        "media": {
+          "logo_url": "https://cdn.prod.website-files.com/6807ee8d73c233fb82842313/681e121b52f97ed0b2098aab_Favicon.png",
+          "preview_image_url": "https://cdn.prod.website-files.com/6807ee8d73c233fb82842313/6846454bda26628fcf51d54c_9650916b48ce089735bcc21cc8e43f2f_OpenGraph%20-%20Home.png"
+        },
         "meta_description": "Orchestrate intelligent agents to run end-to-end marketing workflows delivering speed, control, and measurable impact.",
         "status": 200,
         "title": "Put AI agents to work for marketing | Jasper"
@@ -359,7 +224,7 @@
       "url": "https://www.jasper.ai/"
     },
     {
-      "checked_at": "2026-10-04T01:57:58+00:00",
+      "checked_at": "2026-10-04T02:07:28+00:00",
       "reachable": false,
       "slug": "leonardo-ai",
       "source_metadata": {
@@ -371,7 +236,7 @@
       "url": "https://leonardo.ai/"
     },
     {
-      "checked_at": "2026-10-04T01:57:58+00:00",
+      "checked_at": "2026-10-04T02:07:28+00:00",
       "reachable": true,
       "slug": "microsoft-copilot",
       "source_metadata": {
@@ -387,7 +252,7 @@
       "url": "https://copilot.microsoft.com/"
     },
     {
-      "checked_at": "2026-10-04T01:57:58+00:00",
+      "checked_at": "2026-10-04T02:07:28+00:00",
       "reachable": false,
       "slug": "midjourney",
       "source_metadata": {
@@ -397,24 +262,17 @@
       "url": "https://www.midjourney.com/"
     },
     {
-      "checked_at": "2026-10-04T01:57:58+00:00",
-      "reachable": true,
+      "checked_at": "2026-10-04T02:07:28+00:00",
+      "reachable": false,
       "slug": "notebooklm",
       "source_metadata": {
-        "final_url": "https://notebook.google/students?hl=tr",
-        "media": {
-          "logo_url": "https://notebook.google/_/static/branding/v6/light_mode/favicon/favicon.svg",
-          "preview_image_url": "https://notebook.google/_/static/branding/v6/og/notebook_lm_share.png"
-        },
-        "meta_description": "Öğrencilere özel yapay zeka aracı Gemini Notebook ile ders notlarını özetleyin, çalışma kılavuzları oluşturun, yeni konuları hızla kavrayın ve daha etkili ders çalışın.",
-        "status": 200,
-        "title": "Gemini Notebook | Öğrenciler İçin Yapay Zeka Destekli Ders Çalışma Aracı"
+        "reason": "network_or_protocol_error"
       },
       "source_url": "https://notebook.google/students?hl=tr",
       "url": "https://notebook.google/"
     },
     {
-      "checked_at": "2026-10-04T01:57:58+00:00",
+      "checked_at": "2026-10-04T02:07:28+00:00",
       "reachable": true,
       "slug": "notion-ai",
       "source_metadata": {
@@ -431,7 +289,7 @@
       "url": "https://www.notion.com/product/ai"
     },
     {
-      "checked_at": "2026-10-04T01:57:58+00:00",
+      "checked_at": "2026-10-04T02:07:28+00:00",
       "reachable": false,
       "slug": "perplexity",
       "source_metadata": {
@@ -443,7 +301,7 @@
       "url": "https://www.perplexity.ai/"
     },
     {
-      "checked_at": "2026-10-04T01:57:58+00:00",
+      "checked_at": "2026-10-04T02:07:28+00:00",
       "reachable": true,
       "slug": "pika",
       "source_metadata": {
@@ -460,7 +318,7 @@
       "url": "https://pika.art/"
     },
     {
-      "checked_at": "2026-10-04T01:57:58+00:00",
+      "checked_at": "2026-10-04T02:07:28+00:00",
       "reachable": false,
       "slug": "quillbot",
       "source_metadata": {
@@ -470,19 +328,17 @@
       "url": "https://quillbot.com/"
     },
     {
-      "checked_at": "2026-10-04T01:57:58+00:00",
+      "checked_at": "2026-10-04T02:07:28+00:00",
       "reachable": false,
       "slug": "quizlet",
       "source_metadata": {
-        "final_url": "https://quizlet.com/features/ai-study-tools",
-        "reason": "http_403",
-        "status": 403
+        "reason": "robots_unavailable"
       },
       "source_url": "https://quizlet.com/features/ai-study-tools",
       "url": "https://quizlet.com/features/ai-study-tools"
     },
     {
-      "checked_at": "2026-10-04T01:57:58+00:00",
+      "checked_at": "2026-10-04T02:07:28+00:00",
       "reachable": true,
       "slug": "replit",
       "source_metadata": {
@@ -499,7 +355,7 @@
       "url": "https://replit.com/products/agent"
     },
     {
-      "checked_at": "2026-10-04T01:57:58+00:00",
+      "checked_at": "2026-10-04T02:07:28+00:00",
       "reachable": false,
       "slug": "runway",
       "source_metadata": {
@@ -509,7 +365,7 @@
       "url": "https://runway.com/"
     },
     {
-      "checked_at": "2026-10-04T01:57:58+00:00",
+      "checked_at": "2026-10-04T02:07:28+00:00",
       "reachable": true,
       "slug": "suno",
       "source_metadata": {
@@ -526,7 +382,7 @@
       "url": "https://suno.com/"
     },
     {
-      "checked_at": "2026-10-04T01:57:58+00:00",
+      "checked_at": "2026-10-04T02:07:28+00:00",
       "reachable": true,
       "slug": "synthesia",
       "source_metadata": {
@@ -539,7 +395,7 @@
       "url": "https://www.synthesia.io/"
     },
     {
-      "checked_at": "2026-10-04T01:57:58+00:00",
+      "checked_at": "2026-10-04T02:07:28+00:00",
       "reachable": false,
       "slug": "v0",
       "source_metadata": {
@@ -549,7 +405,7 @@
       "url": "https://v0.app/"
     },
     {
-      "checked_at": "2026-10-04T01:57:58+00:00",
+      "checked_at": "2026-10-04T02:07:28+00:00",
       "reachable": true,
       "slug": "zapier-ai",
       "source_metadata": {

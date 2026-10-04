@@ -1,15 +1,15 @@
 # ZekâAtlas kaynak kontrolü
 
-Bu klasör bağımsız `zekaatlas-catalog` GitHub reposunun köküne taşınmak üzere hazırlanmıştır. Python 3.13 ve standart kütüphane kullanır; ücretli API, scraping servisi veya üçüncü taraf Python paketi gerekmez.
+Bu klasör bağımsız [`zekaatlas-catalog-sync`](https://github.com/SalmanOz/zekaatlas-catalog-sync) GitHub reposunun köküne taşınmak üzere hazırlanmıştır. Python 3.13 ve standart kütüphane kullanır; ücretli API, scraping servisi veya üçüncü taraf Python paketi gerekmez.
 
-Her gün 06:37 Türkiye saatiyle 30 resmi ürün kaynağı kontrol edilir. Başlık, meta açıklama, HTTP durumu ve kontrol zamanı imzalı bir batch olarak ZekâAtlas'a gönderilir. Çalıştırma elle de başlatılabilir. Günlük public metadata raporu `data/latest.json` dosyasına kaydedilir; dosya değiştiyse ayrı GitHub Actions işi bu tek dosyayı commit eder. Bu, kaynak metadata kontrolüdür: fiyatları veya Türkçe editoryal açıklamaları kendiliğinden yeniden yazmaz.
+Her gün 06:37 Türkiye saatiyle 30 resmi ürün kaynağı kontrol edilir ve Hugging Face'in herkese açık Spaces listesinden en fazla 10 yeni araç adayı alınır. Başlık, kısa açıklama, HTTP durumu ve kontrol zamanı bir batch oluşturur. Site gönderim ayarları tamamlandıysa batch imzalı olarak ZekâAtlas'a gönderilir; ayarlar eksikse workflow yalnız kontrol yapar. Çalıştırma elle de başlatılabilir. Günlük public metadata raporu `data/latest.json` dosyasına kaydedilir; dosya değiştiyse ayrı GitHub Actions işi bu tek dosyayı commit eder. Fiyatlar ve Türkçe editoryal açıklamalar kendiliğinden yeniden yazılmaz; yeni adaylar editör onayından önce yayımlanmaz.
 
 ## Kurulum
 
 1. Bu klasörün içeriğini ayrı bir GitHub reposunun köküne koy. `.github/workflows/catalog.yml` varsayılan dalda olmalı.
 2. Repo **Settings → Secrets and variables → Actions** altında `INGEST_SECRET` secret ekle. Laravel `.env` içindeki `INGEST_SECRET` ile aynı, rastgele ve en az 32 karakterli değer kullan.
 3. Aynı yerde `INGEST_ENDPOINT` repository variable ekle: `https://site-adresin/api/ingest/tools`.
-4. Site HTTPS üzerinde çalıştıktan sonra **Actions → Check official AI tool sources → Run workflow** ile ilk kontrolü başlat.
+4. **Actions → Check official AI tool sources → Run workflow** ile ilk kontrolü başlat. Site henüz hazır değilse secret ve variable eklemeden çalıştırabilirsin; bu durumda dry-run ve public rapor commit'leri çalışır. İki ayar da eklendiğinde imzalı gönderim kendiliğinden etkinleşir.
 5. Job summary'deki erişim ve engel sayılarını incele. Ürün sayfasının robots veya bot engeli varsa crawler sınırı aşmaya çalışmaz.
 
 GitHub secret'ın içeriğini manifest'e, komut satırına veya repoya yazma. Workflow secret'ı yalnız gönderim adımına aktarır; çıktılar imzayı veya secret'ı loglamaz. Kaynak kontrolü işi yalnız `contents: read` iznine sahiptir. Public raporu commit eden ayrı iş yalnız `contents: write` izni alır; bu işte ingestion secret bulunmaz. Checkout token'ı kalıcı git yapılandırmasına kaydedilmez. Git push token'ı yalnız commit adımında ortamdan askpass ile aktarılır.
@@ -18,10 +18,10 @@ GitHub secret'ın içeriğini manifest'e, komut satırına veya repoya yazma. Wo
 
 ```sh
 python3 -m unittest discover -s tests -v
-python3 crawler.py --limit 3
+python3 crawler.py --limit 3 --no-discovery
 ```
 
-Gerçek gönderim için `INGEST_ENDPOINT` ve `INGEST_SECRET` ortam değişkenlerini güvenli terminal oturumunda ayarla, ardından `python3 crawler.py --send` çalıştır. Varsayılan çalıştırma siteye yazmaz. Sonuç `out/observations.json` içine kaydedilir ve git tarafından yok sayılır. `python3 public_snapshot.py` komutu raporu izinli alan ve kaynaklarla yeniden doğrular, yalnız public metadata alanlarını `data/latest.json` içine yazar. Aynı rapor dosyayı yeniden yazmaz.
+Gerçek gönderim için `INGEST_ENDPOINT` ve `INGEST_SECRET` ortam değişkenlerini güvenli terminal oturumunda ayarla, ardından `python3 crawler.py --send` çalıştır. Varsayılan CLI çalıştırması siteye yazmaz. `python3 crawler.py` tüm manifest'i ve Spaces keşfini çalıştırır; `--no-discovery` yalnız manifest kontrolünü seçer. Sonuç `out/observations.json` içine kaydedilir ve git tarafından yok sayılır. `python3 public_snapshot.py` komutu raporu izinli alan ve kaynaklarla yeniden doğrular, yalnız public metadata alanlarını `data/latest.json` içine yazar. Aynı rapor dosyayı yeniden yazmaz.
 
 ## Kaynak ve yeni araç ekleme
 
@@ -36,9 +36,13 @@ Gerçek gönderim için `INGEST_ENDPOINT` ve `INGEST_SECRET` ortam değişkenler
 }
 ```
 
-`url` katalogdaki resmi araç adresidir; `source_url` kontrol edilecek resmi bilgi sayfasıdır. Redirect'in geçeceği alan adları da açıkça `allowed_hosts` listesine eklenir. Wildcard ve alt alan adı eşleştirmesi yoktur. Liste run başına en fazla 40 kaynak içerir. Yeni araçları bu listeye eklemek kaynak seçimi için editör işlemidir; bu ilk sürüm otomatik yeni araç keşfi yapmaz. Sürekli kontrol edilen izinli resmi kaynakların metadata'sını izler. Yeni ürün keşfi için bir editör resmi ürün adresini manifest'e eklemelidir; kullanıcı araç gönderimleri de ayrı moderasyon akışına girer. Böylece otomatik bir bağlantı yanlışlıkla yayımlanmaz.
+`url` katalogdaki resmi araç adresidir; `source_url` kontrol edilecek resmi bilgi sayfasıdır. Redirect'in geçeceği alan adları da açıkça `allowed_hosts` listesine eklenir. Wildcard ve alt alan adı eşleştirmesi yoktur. Liste run başına en fazla 40 kaynak içerir. Editör onayladığı yeni resmi ürün kaynağını buraya ekleyebilir; bilinmeyen slug siteye gönderildiğinde moderasyon kuyruğuna girer.
 
-Site mevcut bir slug için yalnız kontrol metadata'sını günceller. Yeni slug backend'in izin verdiği resmi alan adı listesindeyse araç gönderimi moderasyonuna düşer. Editör onayı olmadan yeni araç yayımlanmaz. Yeni bir alan adı eklenirse Laravel `ingest.allowed_hosts` listesine de eklenmelidir.
+Varsayılan keşif bağlantısı yalnız [`GET https://huggingface.co/api/spaces?sort=trendingScore&direction=-1&limit=10`](https://huggingface.co/api/spaces?sort=trendingScore&direction=-1&limit=10) adresini okur. Güncel [Hub API belgeleri](https://huggingface.co/docs/hub/api) ve [Spaces listeleme referansı](https://huggingface.co/docs/huggingface_hub/en/package_reference/hf_api#huggingface_hub.HfApi.list_spaces) bu resmi public listeleme imkanını açıklar. Token, ücretli inference veya Space uygulaması çalıştırma kullanılmaz. Yanıtın en fazla 10 öğesi kabul edilir; `private`, `disabled` veya `gated` işaretli kayıtlar ve hata/durdurma runtime durumları atlanır. URL'ler API'nin keyfi bağlantılarından alınmaz, doğrulanmış `owner/space` kimliğinden yalnız `https://huggingface.co/spaces/owner/space` biçiminde üretilir. Slug `hf-` ile başlar ve en fazla 80 karakterdir. Yalnız varsa kısa card metadata açıklaması alınır; README ve diğer içeriklerin tamamı kopyalanmaz.
+
+Keşif robots engeli, erişim hatası veya geçersiz yanıt nedeniyle yapılamazsa manifest kontrolü ve raporu devam eder. API listelemesinden gelen `reachable=true`, adayın public listede görüldüğünü belirtir; Space uygulamasının çalıştığına dair bir test değildir. `discovered_from_huggingface_api` kaynağı bunu ayırt eder. Public rapor doğrulayıcısı keşif kayıtları için yalnız aynı Hugging Face `/spaces/owner/space` adresi ve bu kimliğe ait slug eşleşmesine izin verir; tüm Hugging Face URL'lerini kabul eden wildcard yoktur.
+
+Site mevcut bir slug için yalnız kontrol metadata'sını günceller. Başlık veya meta açıklama değişiklikleri yönetim panelinde inceleme uyarısı oluşturur. Yeni slug backend'in izin verdiği resmi alan adı listesindeyse araç gönderimi moderasyonuna düşer; tekrar gelen aynı adres yeni bir gönderim oluşturmaz. Editör kategori, Türkçe açıklama, kullanım örnekleri ve fiyat bilgisini inceleyip yayımlama kararı verir. Kullanıcı araç gönderimleri de aynı ayrı moderasyon akışına girer. `huggingface.co` backend izin listesinde bulunur; başka bir alan adı eklenirse Laravel `ingest.allowed_hosts` listesine de eklenmelidir.
 
 ## Tarama sınırları
 

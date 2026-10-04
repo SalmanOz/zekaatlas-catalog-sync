@@ -6,19 +6,32 @@ import json
 from pathlib import Path
 import re
 
-from crawler import build_batch, clean_text, load_manifest, validate_url
+from crawler import (MAX_DISCOVERIES, build_batch, clean_text, hf_space_id_from_url,
+                     hf_space_slug, load_manifest, validate_url)
 
 
 def sanitize_report(report: dict, sources: list[dict]) -> dict:
     known = {(item['slug'], item['source_url']): item for item in sources}
     observations = []
+    discovered_count = 0
     checked_at = report['checked_at']
     if datetime.fromisoformat(checked_at).tzinfo is None:
         raise ValueError('Report timestamp must include its timezone')
     for item in report['observations']:
         source_url = validate_url(item['source_url'])
         entry = known.get((item['slug'], source_url))
-        if not entry or validate_url(item['url']) != entry['url']:
+        is_discovery = not entry
+        if not entry:
+            space_id = hf_space_id_from_url(source_url)
+            if (item['slug'] != hf_space_slug(space_id)
+                    or item['source_metadata'].get('reason') != 'discovered_from_huggingface_api'):
+                raise ValueError('Report contains an unapproved discovery source')
+            entry = {'slug': item['slug'], 'url': source_url,
+                     'source_url': source_url, 'allowed_hosts': ['huggingface.co']}
+            discovered_count += 1
+            if discovered_count > MAX_DISCOVERIES:
+                raise ValueError('Report exceeds the discovery limit')
+        if validate_url(item['url']) != entry['url']:
             raise ValueError('Report contains a source outside the curated manifest')
         if datetime.fromisoformat(item['checked_at']).tzinfo is None:
             raise ValueError('Observation timestamp must include its timezone')
@@ -36,6 +49,8 @@ def sanitize_report(report: dict, sources: list[dict]) -> dict:
             metadata['status'] = status
         if 'final_url' in raw:
             metadata['final_url'] = validate_url(raw['final_url'], set(entry['allowed_hosts']))
+            if is_discovery and metadata['final_url'] != source_url:
+                raise ValueError('Discovery redirect is outside its approved Space page')
         if 'reason' in raw:
             if not re.fullmatch(r'[a-z0-9_]{1,100}', raw['reason']):
                 raise ValueError('Unexpected non-public diagnostic value')
@@ -43,7 +58,7 @@ def sanitize_report(report: dict, sources: list[dict]) -> dict:
         observations.append({'slug': entry['slug'], 'url': entry['url'],
                              'source_url': source_url, 'reachable': item['reachable'],
                              'checked_at': item['checked_at'], 'source_metadata': metadata})
-    if len(observations) > len(sources):
+    if len(observations) > len(sources) + discovered_count:
         raise ValueError('Report exceeds the curated source count')
     return build_batch(observations, checked_at)
 

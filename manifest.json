@@ -29,9 +29,9 @@
     },
     {
       "slug": "perplexity",
-      "source_url": "https://hub-prod.perplexity.ai/hub/faq/what-is-perplexity",
+      "source_url": "https://www.perplexity.ai/hub",
       "allowed_hosts": [
-        "hub-prod.perplexity.ai"
+        "www.perplexity.ai"
       ],
       "url": "https://www.perplexity.ai/"
     },

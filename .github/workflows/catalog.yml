@@ -19,22 +19,34 @@ jobs:
     outputs:
       public_report: ${{ steps.report.outputs.payload }}
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           persist-credentials: false
-      - uses: actions/setup-python@v7
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
         with:
           python-version: '3.13'
       - name: Verify crawler and source manifest
         run: python -m unittest discover -s tests -v
-      - name: Check public sources and send signed observations
+      - name: Check public sources and optionally send signed observations
+        id: delivery
         env:
           INGEST_ENDPOINT: ${{ vars.INGEST_ENDPOINT }}
           INGEST_SECRET: ${{ secrets.INGEST_SECRET }}
-        run: python crawler.py --send
+        run: |
+          if [ -n "$INGEST_ENDPOINT" ] && [ -n "$INGEST_SECRET" ]; then
+            echo 'mode=signed-ingestion' >> "$GITHUB_OUTPUT"
+            python crawler.py --send
+          else
+            echo 'mode=dry-run' >> "$GITHUB_OUTPUT"
+            python crawler.py
+            echo '::notice::Dry run: configure both INGEST_ENDPOINT and INGEST_SECRET after site deployment to activate signed ingestion. Public report commits remain enabled.'
+          fi
       - name: Prepare public report and aggregate summary
         id: report
         if: always()
+        env:
+          DELIVERY_MODE: ${{ steps.delivery.outputs.mode }}
+          DELIVERY_RESULT: ${{ steps.delivery.outcome }}
         run: |
           python - <<'PY'
           import base64, json, os
@@ -48,14 +60,18 @@ jobs:
               with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
                   output.write(f'payload={payload}\n')
               checks = batch['observations']
-              reached = sum(item['reachable'] for item in checks)
+              discoveries = [item for item in checks if item['source_metadata'].get('reason') == 'discovered_from_huggingface_api']
+              curated = [item for item in checks if item not in discoveries]
+              reached = sum(item['reachable'] for item in curated)
               reasons = {}
               for item in checks:
                   reason = item['source_metadata'].get('reason')
-                  if reason:
+                  if reason and not item['reachable']:
                       reasons[reason] = reasons.get(reason, 0) + 1
               with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as summary:
-                  summary.write(f'Checked {len(checks)} allowlisted sources; {reached} public HTML responses.\n\n')
+                  summary.write(f'Checked {len(curated)} curated sources; {reached} accessible.\n\n')
+                  summary.write(f'Discovered {len(discoveries)} public Hugging Face Spaces candidates; editor approval is required before publication.\n\n')
+                  summary.write(f"Delivery: {os.environ.get('DELIVERY_MODE', 'not-started')} ({os.environ.get('DELIVERY_RESULT', 'unknown')}).\n\n")
                   for reason, count in sorted(reasons.items()):
                       summary.write(f'- {reason}: {count}\n')
           PY
@@ -67,10 +83,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 3
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           persist-credentials: false
-      - uses: actions/setup-python@v7
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
         with:
           python-version: '3.13'
       - name: Save sanitized public metadata

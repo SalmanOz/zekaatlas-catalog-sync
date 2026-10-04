@@ -1,6 +1,6 @@
 {
-  "batch_id": "5cece6ee8d0ae103be44355f6513af9562fa05857d929c1322a434f23722e2b8",
-  "checked_at": "2026-10-04T01:19:22+00:00",
+  "batch_id": "6463b01822389c430748bd06c9f44e3b0541231ce67f652fd6ceab60948869aa",
+  "checked_at": "2026-10-04T01:29:34+00:00",
   "observations": [
     {
       "checked_at": "2026-10-04T01:19:22+00:00",
@@ -160,6 +160,136 @@
       "url": "https://www.heygen.com/"
     },
     {
+      "checked_at": "2026-10-04T01:29:34+00:00",
+      "reachable": true,
+      "slug": "hf-arudradey-qwen-image-2-1-uncensored-aio-loras",
+      "source_metadata": {
+        "meta_description": "Hugging Face üzerinde sunulan herkese açık bir gradio demosu. Yayına alınmadan önce editör incelemesi gerekir.",
+        "reason": "discovered_from_huggingface_api",
+        "status": 200,
+        "title": "Hugging Face: arudradey/qwen-image-2.1-uncensored-aio-loras"
+      },
+      "source_url": "https://huggingface.co/spaces/arudradey/qwen-image-2.1-uncensored-aio-loras",
+      "url": "https://huggingface.co/spaces/arudradey/qwen-image-2.1-uncensored-aio-loras"
+    },
+    {
+      "checked_at": "2026-10-04T01:29:34+00:00",
+      "reachable": true,
+      "slug": "hf-arudradey-qwen-image-2-1-uncensored-gguf",
+      "source_metadata": {
+        "meta_description": "Hugging Face üzerinde sunulan herkese açık bir gradio demosu. Yayına alınmadan önce editör incelemesi gerekir.",
+        "reason": "discovered_from_huggingface_api",
+        "status": 200,
+        "title": "Hugging Face: arudradey/qwen-image-2.1-uncensored-gguf"
+      },
+      "source_url": "https://huggingface.co/spaces/arudradey/qwen-image-2.1-uncensored-gguf",
+      "url": "https://huggingface.co/spaces/arudradey/qwen-image-2.1-uncensored-gguf"
+    },
+    {
+      "checked_at": "2026-10-04T01:29:34+00:00",
+      "reachable": true,
+      "slug": "hf-fineenvs-multi-harness-rl",
+      "source_metadata": {
+        "meta_description": "Hugging Face üzerinde sunulan herkese açık bir docker demosu. Yayına alınmadan önce editör incelemesi gerekir.",
+        "reason": "discovered_from_huggingface_api",
+        "status": 200,
+        "title": "Hugging Face: FineEnvs/multi-harness-rl"
+      },
+      "source_url": "https://huggingface.co/spaces/FineEnvs/multi-harness-rl",
+      "url": "https://huggingface.co/spaces/FineEnvs/multi-harness-rl"
+    },
+    {
+      "checked_at": "2026-10-04T01:29:34+00:00",
+      "reachable": true,
+      "slug": "hf-jackiesixnine-krea-2-turbo-v2",
+      "source_metadata": {
+        "meta_description": "Hugging Face üzerinde sunulan herkese açık bir gradio demosu. Yayına alınmadan önce editör incelemesi gerekir.",
+        "reason": "discovered_from_huggingface_api",
+        "status": 200,
+        "title": "Hugging Face: Jackiesixnine/Krea-2-Turbo_v2"
+      },
+      "source_url": "https://huggingface.co/spaces/Jackiesixnine/Krea-2-Turbo_v2",
+      "url": "https://huggingface.co/spaces/Jackiesixnine/Krea-2-Turbo_v2"
+    },
+    {
+      "checked_at": "2026-10-04T01:29:34+00:00",
+      "reachable": true,
+      "slug": "hf-kulkas2pintu-qwen-edit-image",
+      "source_metadata": {
+        "meta_description": "Hugging Face üzerinde sunulan herkese açık bir gradio demosu. Yayına alınmadan önce editör incelemesi gerekir.",
+        "reason": "discovered_from_huggingface_api",
+        "status": 200,
+        "title": "Hugging Face: kulkas2pintu/QWEN_EDIT_IMAGE"
+      },
+      "source_url": "https://huggingface.co/spaces/kulkas2pintu/QWEN_EDIT_IMAGE",
+      "url": "https://huggingface.co/spaces/kulkas2pintu/QWEN_EDIT_IMAGE"
+    },
+    {
+      "checked_at": "2026-10-04T01:29:34+00:00",
+      "reachable": true,
+      "slug": "hf-kulkas2pintu-wan777",
+      "source_metadata": {
+        "meta_description": "Hugging Face üzerinde sunulan herkese açık bir gradio demosu. Yayına alınmadan önce editör incelemesi gerekir.",
+        "reason": "discovered_from_huggingface_api",
+        "status": 200,
+        "title": "Hugging Face: kulkas2pintu/wan777"
+      },
+      "source_url": "https://huggingface.co/spaces/kulkas2pintu/wan777",
+      "url": "https://huggingface.co/spaces/kulkas2pintu/wan777"
+    },
+    {
+      "checked_at": "2026-10-04T01:29:34+00:00",
+      "reachable": true,
+      "slug": "hf-multimodalart-jev-decision-index",
+      "source_metadata": {
+        "meta_description": "Hugging Face üzerinde sunulan herkese açık bir static demosu. Yayına alınmadan önce editör incelemesi gerekir.",
+        "reason": "discovered_from_huggingface_api",
+        "status": 200,
+        "title": "Hugging Face: multimodalart/jev-decision-index"
+      },
+      "source_url": "https://huggingface.co/spaces/multimodalart/jev-decision-index",
+      "url": "https://huggingface.co/spaces/multimodalart/jev-decision-index"
+    },
+    {
+      "checked_at": "2026-10-04T01:29:34+00:00",
+      "reachable": true,
+      "slug": "hf-pepe104-minimax-h3-turbo-lora-uncensored",
+      "source_metadata": {
+        "meta_description": "Hugging Face üzerinde sunulan herkese açık bir gradio demosu. Yayına alınmadan önce editör incelemesi gerekir.",
+        "reason": "discovered_from_huggingface_api",
+        "status": 200,
+        "title": "Hugging Face: Pepe104/MiniMax-H3-Turbo-Lora-UNCENSORED"
+      },
+      "source_url": "https://huggingface.co/spaces/Pepe104/MiniMax-H3-Turbo-Lora-UNCENSORED",
+      "url": "https://huggingface.co/spaces/Pepe104/MiniMax-H3-Turbo-Lora-UNCENSORED"
+    },
+    {
+      "checked_at": "2026-10-04T01:29:34+00:00",
+      "reachable": true,
+      "slug": "hf-qwen-qwen-image-2-1",
+      "source_metadata": {
+        "meta_description": "Hugging Face üzerinde sunulan herkese açık bir gradio demosu. Yayına alınmadan önce editör incelemesi gerekir.",
+        "reason": "discovered_from_huggingface_api",
+        "status": 200,
+        "title": "Hugging Face: Qwen/Qwen-Image-2.1"
+      },
+      "source_url": "https://huggingface.co/spaces/Qwen/Qwen-Image-2.1",
+      "url": "https://huggingface.co/spaces/Qwen/Qwen-Image-2.1"
+    },
+    {
+      "checked_at": "2026-10-04T01:29:34+00:00",
+      "reachable": true,
+      "slug": "hf-viggle-qwen-image-2-1-viggle-turbo",
+      "source_metadata": {
+        "meta_description": "Hugging Face üzerinde sunulan herkese açık bir gradio demosu. Yayına alınmadan önce editör incelemesi gerekir.",
+        "reason": "discovered_from_huggingface_api",
+        "status": 200,
+        "title": "Hugging Face: Viggle/Qwen-Image-2.1-viggle-turbo"
+      },
+      "source_url": "https://huggingface.co/spaces/Viggle/Qwen-Image-2.1-viggle-turbo",
+      "url": "https://huggingface.co/spaces/Viggle/Qwen-Image-2.1-viggle-turbo"
+    },
+    {
       "checked_at": "2026-10-04T01:19:22+00:00",
       "reachable": true,
       "slug": "ideogram",
@@ -247,15 +377,15 @@
       "url": "https://www.notion.com/product/ai"
     },
     {
-      "checked_at": "2026-10-04T01:19:22+00:00",
+      "checked_at": "2026-10-04T01:22:10+00:00",
       "reachable": false,
       "slug": "perplexity",
       "source_metadata": {
-        "final_url": "https://hub-prod.perplexity.ai/hub/faq/what-is-perplexity",
-        "reason": "http_404",
-        "status": 404
+        "final_url": "https://www.perplexity.ai/hub",
+        "reason": "http_403",
+        "status": 403
       },
-      "source_url": "https://hub-prod.perplexity.ai/hub/faq/what-is-perplexity",
+      "source_url": "https://www.perplexity.ai/hub",
       "url": "https://www.perplexity.ai/"
     },
     {

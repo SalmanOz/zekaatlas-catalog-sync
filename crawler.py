@@ -25,6 +25,9 @@ USER_AGENT = "ZekaAtlasBot/1.0"
 MAX_SOURCES = 40
 MAX_BODY_BYTES = 1_048_576
 MAX_REDIRECTS = 3
+MAX_DISCOVERIES = 10
+HF_SPACES_API = "https://huggingface.co/api/spaces?sort=trendingScore&direction=-1&limit=10"
+HF_SPACE_ID = re.compile(r"[A-Za-z0-9][A-Za-z0-9_.-]{0,63}/[A-Za-z0-9][A-Za-z0-9_.-]{0,95}")
 REDIRECT_STATUSES = {301, 302, 303, 307, 308}
 
 
@@ -261,6 +264,79 @@ def load_manifest(path: Path, limit: int = MAX_SOURCES) -> list[dict]:
     return sorted(unique.values(), key=lambda entry: (entry["slug"], entry["source_url"]))[:limit]
 
 
+
+def hf_space_slug(space_id: str) -> str:
+    if not HF_SPACE_ID.fullmatch(space_id):
+        raise FetchError("invalid_space_id")
+    normalized = re.sub(r"[^a-z0-9]+", "-", space_id.lower()).strip("-")
+    slug = "hf-" + normalized
+    return slug if len(slug) <= 80 else slug[:71].rstrip("-") + "-" + sha256(space_id.encode()).hexdigest()[:8]
+
+
+def hf_space_id_from_url(url: str) -> str:
+    url = validate_url(url, {"huggingface.co"})
+    parts = urlsplit(url)
+    space_id = parts.path.removeprefix("/spaces/")
+    if not parts.path.startswith("/spaces/") or parts.query or not HF_SPACE_ID.fullmatch(space_id):
+        raise FetchError("invalid_space_url")
+    return space_id
+
+
+def parse_space_discoveries(body: bytes, checked_at: str) -> list[dict]:
+    if len(body) > MAX_BODY_BYTES:
+        raise FetchError("discovery_response_too_large")
+    try:
+        records = json.loads(body)
+    except (ValueError, UnicodeDecodeError):
+        raise FetchError("discovery_invalid_json") from None
+    if not isinstance(records, list) or len(records) > MAX_DISCOVERIES:
+        raise FetchError("discovery_record_limit")
+    observations = []
+    seen = set()
+    for record in records:
+        if not isinstance(record, dict):
+            continue
+        space_id = record.get("id")
+        if not isinstance(space_id, str) or not HF_SPACE_ID.fullmatch(space_id) or space_id in seen:
+            continue
+        if record.get("private") is not False or any(
+                record.get(key, False) is not False for key in ("disabled", "gated")):
+            continue
+        runtime = record.get("runtime", {})
+        if isinstance(runtime, dict) and runtime.get("stage") in {
+                "PAUSED", "STOPPED", "RUNTIME_ERROR", "BUILD_ERROR", "DELETED", "NO_APP_FILE"}:
+            continue
+        seen.add(space_id)
+        url = "https://huggingface.co/spaces/" + space_id
+        card = record.get("cardData", {})
+        description = card.get("short_description", "") if isinstance(card, dict) else ""
+        if not isinstance(description, str):
+            description = ""
+        if not description:
+            sdk = record.get("sdk")
+            label = sdk if sdk in {"gradio", "streamlit", "docker", "static"} else "yapay zeka"
+            description = f"Hugging Face üzerinde sunulan herkese açık bir {label} demosu. Yayına alınmadan önce editör incelemesi gerekir."
+        observations.append({"slug": hf_space_slug(space_id), "url": url,
+                             "source_url": url, "reachable": True, "checked_at": checked_at,
+                             "source_metadata": {"title": "Hugging Face: " + space_id,
+                                                 "meta_description": clean_text(description, 300),
+                                                 "status": 200,
+                                                 "reason": "discovered_from_huggingface_api"}})
+    return observations
+
+
+def discover_spaces(http: SafeHTTP, checked_at: str) -> list[dict]:
+    hosts = {"huggingface.co"}
+    if not Crawler(http).robots_allowed(HF_SPACES_API, hosts):
+        raise FetchError("discovery_robots_denied")
+    response = http.request(HF_SPACES_API, hosts, headers={"Accept": "application/json"})
+    if response.status != 200:
+        raise FetchError("discovery_http_" + str(response.status))
+    if "application/json" not in response.headers.get("content-type", "").lower():
+        raise FetchError("discovery_not_json")
+    return parse_space_discoveries(response.body, checked_at)
+
+
 def canonical_bytes(value) -> bytes:
     return json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode("utf-8")
 
@@ -303,17 +379,28 @@ def main() -> int:
     parser.add_argument("--output", type=Path, default=Path("out/observations.json"))
     parser.add_argument("--limit", type=int, default=MAX_SOURCES)
     parser.add_argument("--send", action="store_true")
+    parser.add_argument("--no-discovery", action="store_true", help="Check only curated sources")
     args = parser.parse_args()
     try:
         sources = load_manifest(args.manifest, args.limit)
         checked_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
         http = SafeHTTP()
         crawler = Crawler(http)
-        batch = build_batch([crawler.check(source, checked_at) for source in sources], checked_at)
+        observations = [crawler.check(source, checked_at) for source in sources]
+        discoveries = []
+        if not args.no_discovery:
+            try:
+                discoveries = discover_spaces(http, checked_at)
+                observations.extend(discoveries)
+            except FetchError as error:
+                print(f"Discovery skipped: {clean_text(str(error), 100)}")
+        batch = build_batch(observations, checked_at)
         args.output.parent.mkdir(parents=True, exist_ok=True)
         args.output.write_bytes(canonical_bytes(batch) + b"\n")
-        reached = sum(item["reachable"] for item in batch["observations"])
-        print(f"Checked {len(sources)} sources; {reached} public HTML responses; batch {batch['batch_id']}")
+        reached = sum(item["reachable"] for item in observations
+                      if item["source_metadata"].get("reason") != "discovered_from_huggingface_api")
+        print(f"Checked {len(sources)} curated sources; {reached} public HTML responses; "
+              f"{len(discoveries)} public Spaces discovered for moderation; batch {batch['batch_id']}")
         if args.send:
             endpoint = os.environ.get("INGEST_ENDPOINT", "")
             secret = os.environ.get("INGEST_SECRET", "")

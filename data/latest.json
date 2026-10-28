@@ -1,9 +1,9 @@
 {
-  "batch_id": "cabe90ceb7aad1414962f9555be327d483938131587815c458c66dcd2c166788",
-  "checked_at": "2026-10-27T09:18:21+00:00",
+  "batch_id": "55bdf5dd1dca56381e0b68c3a2ce52707744e920d1df87f8961e5e0e0b3b4066",
+  "checked_at": "2026-10-28T09:58:58+00:00",
   "observations": [
     {
-      "checked_at": "2026-10-27T09:18:21+00:00",
+      "checked_at": "2026-10-28T09:58:58+00:00",
       "reachable": true,
       "slug": "adobe-firefly",
       "source_metadata": {
@@ -19,17 +19,23 @@
       "url": "https://firefly.adobe.com/"
     },
     {
-      "checked_at": "2026-10-27T09:18:21+00:00",
-      "reachable": false,
+      "checked_at": "2026-10-28T09:58:58+00:00",
+      "reachable": true,
       "slug": "adobe-podcast",
       "source_metadata": {
-        "reason": "network_or_protocol_error"
+        "final_url": "https://podcast.adobe.com/",
+        "media": {
+          "logo_url": "https://podcast.adobe.com/adobe-podcast-favicon.svg"
+        },
+        "meta_description": "Next generation audio from Adobe is here. Record, transcribe, edit, share. Crisp and clear, every time.",
+        "status": 200,
+        "title": "Adobe Podcast | AI audio recording and editing, all on the web"
       },
       "source_url": "https://podcast.adobe.com/",
       "url": "https://podcast.adobe.com/"
     },
     {
-      "checked_at": "2026-10-27T09:18:21+00:00",
+      "checked_at": "2026-10-28T09:58:58+00:00",
       "reachable": false,
       "slug": "canva",
       "source_metadata": {
@@ -41,7 +47,7 @@
       "url": "https://www.canva.com/magic-studio/"
     },
     {
-      "checked_at": "2026-10-27T09:18:21+00:00",
+      "checked_at": "2026-10-28T09:58:58+00:00",
       "reachable": false,
       "slug": "chatgpt",
       "source_metadata": {
@@ -53,7 +59,7 @@
       "url": "https://chatgpt.com/"
     },
     {
-      "checked_at": "2026-10-27T09:18:21+00:00",
+      "checked_at": "2026-10-28T09:58:58+00:00",
       "reachable": true,
       "slug": "claude",
       "source_metadata": {
@@ -70,7 +76,7 @@
       "url": "https://claude.ai/"
     },
     {
-      "checked_at": "2026-10-27T09:18:21+00:00",
+      "checked_at": "2026-10-28T09:58:58+00:00",
       "reachable": true,
       "slug": "cursor",
       "source_metadata": {
@@ -87,7 +93,7 @@
       "url": "https://cursor.com/"
     },
     {
-      "checked_at": "2026-10-27T09:18:21+00:00",
+      "checked_at": "2026-10-28T09:58:58+00:00",
       "reachable": true,
       "slug": "elevenlabs",
       "source_metadata": {
@@ -104,7 +110,7 @@
       "url": "https://elevenlabs.io/"
     },
     {
-      "checked_at": "2026-10-27T09:18:21+00:00",
+      "checked_at": "2026-10-28T09:58:58+00:00",
       "reachable": false,
       "slug": "elicit",
       "source_metadata": {
@@ -114,7 +120,7 @@
       "url": "https://elicit.com/"
     },
     {
-      "checked_at": "2026-10-27T09:18:21+00:00",
+      "checked_at": "2026-10-28T09:58:58+00:00",
       "reachable": false,
       "slug": "gamma",
       "source_metadata": {
@@ -124,7 +130,7 @@
       "url": "https://gamma.app/"
     },
     {
-      "checked_at": "2026-10-27T09:18:21+00:00",
+      "checked_at": "2026-10-28T09:58:58+00:00",
       "reachable": true,
       "slug": "gemini",
       "source_metadata": {
@@ -140,13 +146,14 @@
       "url": "https://gemini.google.com/"
     },
     {
-      "checked_at": "2026-10-27T09:18:21+00:00",
+      "checked_at": "2026-10-28T09:58:58+00:00",
       "reachable": true,
       "slug": "github-copilot",
       "source_metadata": {
         "final_url": "https://github.com/features/copilot",
         "media": {
-          "logo_url": "https://github.githubassets.com/assets/pinned-octocat-093da3e6fa40.svg"
+          "logo_url": "https://github.githubassets.com/assets/pinned-octocat-093da3e6fa40.svg",
+          "preview_image_url": "https://images.ctfassets.net/8aevphvgewt8/4KxWJH8PVVXdqBLs1V3UJ8/8926c7d150a8b8f3bf33c1c8a133724b/github-copilot-social-img.png"
         },
         "meta_description": "GitHub Copilot works every step of the way, from an open issue to reviewing and merging a pull request. Use it in your editor, the terminal, on your desktop, and on GitHub.",
         "status": 200,
@@ -156,7 +163,7 @@
       "url": "https://github.com/features/copilot"
     },
     {
-      "checked_at": "2026-10-27T09:18:21+00:00",
+      "checked_at": "2026-10-28T09:58:58+00:00",
       "reachable": true,
       "slug": "grammarly",
       "source_metadata": {
@@ -173,7 +180,7 @@
       "url": "https://www.grammarly.com/"
     },
     {
-      "checked_at": "2026-10-27T09:18:21+00:00",
+      "checked_at": "2026-10-28T09:58:58+00:00",
       "reachable": true,
       "slug": "heygen",
       "source_metadata": {
@@ -190,7 +197,137 @@
       "url": "https://www.heygen.com/"
     },
     {
-      "checked_at": "2026-10-27T09:18:21+00:00",
+      "checked_at": "2026-10-28T09:58:58+00:00",
+      "reachable": true,
+      "slug": "hf-ast-1320-qwen-2511-plus-flux-2-klein",
+      "source_metadata": {
+        "meta_description": "Hugging Face üzerinde sunulan herkese açık bir gradio demosu. Yayına alınmadan önce editör incelemesi gerekir.",
+        "reason": "discovered_from_huggingface_api",
+        "status": 200,
+        "title": "Hugging Face: AST-1320/Qwen-2511-Plus-Flux.2-klein"
+      },
+      "source_url": "https://huggingface.co/spaces/AST-1320/Qwen-2511-Plus-Flux.2-klein",
+      "url": "https://huggingface.co/spaces/AST-1320/Qwen-2511-Plus-Flux.2-klein"
+    },
+    {
+      "checked_at": "2026-10-28T09:58:58+00:00",
+      "reachable": true,
+      "slug": "hf-dlouapre-nlp-before-llms",
+      "source_metadata": {
+        "meta_description": "Hugging Face üzerinde sunulan herkese açık bir docker demosu. Yayına alınmadan önce editör incelemesi gerekir.",
+        "reason": "discovered_from_huggingface_api",
+        "status": 200,
+        "title": "Hugging Face: dlouapre/nlp-before-llms"
+      },
+      "source_url": "https://huggingface.co/spaces/dlouapre/nlp-before-llms",
+      "url": "https://huggingface.co/spaces/dlouapre/nlp-before-llms"
+    },
+    {
+      "checked_at": "2026-10-28T09:58:58+00:00",
+      "reachable": true,
+      "slug": "hf-fishpasters-uncensored-imagetoimage2ref",
+      "source_metadata": {
+        "meta_description": "Hugging Face üzerinde sunulan herkese açık bir gradio demosu. Yayına alınmadan önce editör incelemesi gerekir.",
+        "reason": "discovered_from_huggingface_api",
+        "status": 200,
+        "title": "Hugging Face: fishpasters/uncensored-imageTOimage2Ref"
+      },
+      "source_url": "https://huggingface.co/spaces/fishpasters/uncensored-imageTOimage2Ref",
+      "url": "https://huggingface.co/spaces/fishpasters/uncensored-imageTOimage2Ref"
+    },
+    {
+      "checked_at": "2026-10-28T09:58:58+00:00",
+      "reachable": true,
+      "slug": "hf-glitchlab-minimax-h3-turbo-lora-uncensored-workflow",
+      "source_metadata": {
+        "meta_description": "Hugging Face üzerinde sunulan herkese açık bir gradio demosu. Yayına alınmadan önce editör incelemesi gerekir.",
+        "reason": "discovered_from_huggingface_api",
+        "status": 200,
+        "title": "Hugging Face: glitchlab/MiniMax-H3-Turbo-Lora-UNCENSORED-Workflow"
+      },
+      "source_url": "https://huggingface.co/spaces/glitchlab/MiniMax-H3-Turbo-Lora-UNCENSORED-Workflow",
+      "url": "https://huggingface.co/spaces/glitchlab/MiniMax-H3-Turbo-Lora-UNCENSORED-Workflow"
+    },
+    {
+      "checked_at": "2026-10-28T09:58:58+00:00",
+      "reachable": true,
+      "slug": "hf-hugging-apps-bfs-best-face-swap",
+      "source_metadata": {
+        "meta_description": "Hugging Face üzerinde sunulan herkese açık bir gradio demosu. Yayına alınmadan önce editör incelemesi gerekir.",
+        "reason": "discovered_from_huggingface_api",
+        "status": 200,
+        "title": "Hugging Face: hugging-apps/bfs-best-face-swap"
+      },
+      "source_url": "https://huggingface.co/spaces/hugging-apps/bfs-best-face-swap",
+      "url": "https://huggingface.co/spaces/hugging-apps/bfs-best-face-swap"
+    },
+    {
+      "checked_at": "2026-10-28T09:58:58+00:00",
+      "reachable": true,
+      "slug": "hf-kulkas2pintu-wan777",
+      "source_metadata": {
+        "meta_description": "Hugging Face üzerinde sunulan herkese açık bir gradio demosu. Yayına alınmadan önce editör incelemesi gerekir.",
+        "reason": "discovered_from_huggingface_api",
+        "status": 200,
+        "title": "Hugging Face: kulkas2pintu/wan777"
+      },
+      "source_url": "https://huggingface.co/spaces/kulkas2pintu/wan777",
+      "url": "https://huggingface.co/spaces/kulkas2pintu/wan777"
+    },
+    {
+      "checked_at": "2026-10-28T09:58:58+00:00",
+      "reachable": true,
+      "slug": "hf-multimodalart-jev-decision-index",
+      "source_metadata": {
+        "meta_description": "Hugging Face üzerinde sunulan herkese açık bir static demosu. Yayına alınmadan önce editör incelemesi gerekir.",
+        "reason": "discovered_from_huggingface_api",
+        "status": 200,
+        "title": "Hugging Face: multimodalart/jev-decision-index"
+      },
+      "source_url": "https://huggingface.co/spaces/multimodalart/jev-decision-index",
+      "url": "https://huggingface.co/spaces/multimodalart/jev-decision-index"
+    },
+    {
+      "checked_at": "2026-10-28T09:58:58+00:00",
+      "reachable": true,
+      "slug": "hf-nvidia-simready-central",
+      "source_metadata": {
+        "meta_description": "Hugging Face üzerinde sunulan herkese açık bir docker demosu. Yayına alınmadan önce editör incelemesi gerekir.",
+        "reason": "discovered_from_huggingface_api",
+        "status": 200,
+        "title": "Hugging Face: nvidia/simready-central"
+      },
+      "source_url": "https://huggingface.co/spaces/nvidia/simready-central",
+      "url": "https://huggingface.co/spaces/nvidia/simready-central"
+    },
+    {
+      "checked_at": "2026-10-28T09:58:58+00:00",
+      "reachable": true,
+      "slug": "hf-pollen-robotics-microduck-simulator",
+      "source_metadata": {
+        "meta_description": "Hugging Face üzerinde sunulan herkese açık bir docker demosu. Yayına alınmadan önce editör incelemesi gerekir.",
+        "reason": "discovered_from_huggingface_api",
+        "status": 200,
+        "title": "Hugging Face: pollen-robotics/microduck-simulator"
+      },
+      "source_url": "https://huggingface.co/spaces/pollen-robotics/microduck-simulator",
+      "url": "https://huggingface.co/spaces/pollen-robotics/microduck-simulator"
+    },
+    {
+      "checked_at": "2026-10-28T09:58:58+00:00",
+      "reachable": true,
+      "slug": "hf-wank3r-minimax-h3",
+      "source_metadata": {
+        "meta_description": "Hugging Face üzerinde sunulan herkese açık bir gradio demosu. Yayına alınmadan önce editör incelemesi gerekir.",
+        "reason": "discovered_from_huggingface_api",
+        "status": 200,
+        "title": "Hugging Face: wank3r/minimax-h3"
+      },
+      "source_url": "https://huggingface.co/spaces/wank3r/minimax-h3",
+      "url": "https://huggingface.co/spaces/wank3r/minimax-h3"
+    },
+    {
+      "checked_at": "2026-10-28T09:58:58+00:00",
       "reachable": true,
       "slug": "ideogram",
       "source_metadata": {
@@ -207,7 +344,7 @@
       "url": "https://ideogram.ai/"
     },
     {
-      "checked_at": "2026-10-27T09:18:21+00:00",
+      "checked_at": "2026-10-28T09:58:58+00:00",
       "reachable": true,
       "slug": "jasper",
       "source_metadata": {
@@ -224,7 +361,7 @@
       "url": "https://www.jasper.ai/"
     },
     {
-      "checked_at": "2026-10-27T09:18:21+00:00",
+      "checked_at": "2026-10-28T09:58:58+00:00",
       "reachable": false,
       "slug": "leonardo-ai",
       "source_metadata": {
@@ -236,7 +373,7 @@
       "url": "https://leonardo.ai/"
     },
     {
-      "checked_at": "2026-10-27T09:18:21+00:00",
+      "checked_at": "2026-10-28T09:58:58+00:00",
       "reachable": true,
       "slug": "microsoft-copilot",
       "source_metadata": {
@@ -252,7 +389,7 @@
       "url": "https://copilot.microsoft.com/"
     },
     {
-      "checked_at": "2026-10-27T09:18:21+00:00",
+      "checked_at": "2026-10-28T09:58:58+00:00",
       "reachable": false,
       "slug": "midjourney",
       "source_metadata": {
@@ -262,7 +399,7 @@
       "url": "https://www.midjourney.com/"
     },
     {
-      "checked_at": "2026-10-27T09:18:21+00:00",
+      "checked_at": "2026-10-28T09:58:58+00:00",
       "reachable": false,
       "slug": "notebooklm",
       "source_metadata": {
@@ -272,7 +409,7 @@
       "url": "https://notebook.google/"
     },
     {
-      "checked_at": "2026-10-27T09:18:21+00:00",
+      "checked_at": "2026-10-28T09:58:58+00:00",
       "reachable": true,
       "slug": "notion-ai",
       "source_metadata": {
@@ -289,7 +426,7 @@
       "url": "https://www.notion.com/product/ai"
     },
     {
-      "checked_at": "2026-10-27T09:18:21+00:00",
+      "checked_at": "2026-10-28T09:58:58+00:00",
       "reachable": false,
       "slug": "perplexity",
       "source_metadata": {
@@ -301,7 +438,7 @@
       "url": "https://www.perplexity.ai/"
     },
     {
-      "checked_at": "2026-10-27T09:18:21+00:00",
+      "checked_at": "2026-10-28T09:58:58+00:00",
       "reachable": true,
       "slug": "pika",
       "source_metadata": {
@@ -318,7 +455,7 @@
       "url": "https://pika.art/"
     },
     {
-      "checked_at": "2026-10-27T09:18:21+00:00",
+      "checked_at": "2026-10-28T09:58:58+00:00",
       "reachable": false,
       "slug": "quillbot",
       "source_metadata": {
@@ -328,7 +465,7 @@
       "url": "https://quillbot.com/"
     },
     {
-      "checked_at": "2026-10-27T09:18:21+00:00",
+      "checked_at": "2026-10-28T09:58:58+00:00",
       "reachable": false,
       "slug": "quizlet",
       "source_metadata": {
@@ -340,7 +477,7 @@
       "url": "https://quizlet.com/features/ai-study-tools"
     },
     {
-      "checked_at": "2026-10-27T09:18:21+00:00",
+      "checked_at": "2026-10-28T09:58:58+00:00",
       "reachable": true,
       "slug": "replit",
       "source_metadata": {
@@ -357,7 +494,7 @@
       "url": "https://replit.com/products/agent"
     },
     {
-      "checked_at": "2026-10-27T09:18:21+00:00",
+      "checked_at": "2026-10-28T09:58:58+00:00",
       "reachable": false,
       "slug": "runway",
       "source_metadata": {
@@ -367,7 +504,7 @@
       "url": "https://runway.com/"
     },
     {
-      "checked_at": "2026-10-27T09:18:21+00:00",
+      "checked_at": "2026-10-28T09:58:58+00:00",
       "reachable": true,
       "slug": "suno",
       "source_metadata": {
@@ -384,7 +521,7 @@
       "url": "https://suno.com/"
     },
     {
-      "checked_at": "2026-10-27T09:18:21+00:00",
+      "checked_at": "2026-10-28T09:58:58+00:00",
       "reachable": true,
       "slug": "synthesia",
       "source_metadata": {
@@ -397,7 +534,7 @@
       "url": "https://www.synthesia.io/"
     },
     {
-      "checked_at": "2026-10-27T09:18:21+00:00",
+      "checked_at": "2026-10-28T09:58:58+00:00",
       "reachable": true,
       "slug": "v0",
       "source_metadata": {
@@ -414,7 +551,7 @@
       "url": "https://v0.app/"
     },
     {
-      "checked_at": "2026-10-27T09:18:21+00:00",
+      "checked_at": "2026-10-28T09:58:58+00:00",
       "reachable": true,
       "slug": "zapier-ai",
       "source_metadata": {

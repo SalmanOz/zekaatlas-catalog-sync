@@ -1,9 +1,9 @@
 {
-  "batch_id": "2c182fbfe5388727ce5e422e1a7e28c88223227a26f74656d8a8e9000dc7e7cb",
-  "checked_at": "2026-10-29T10:21:53+00:00",
+  "batch_id": "a5a600d912f7b76d6d495682bcd6829b06f8ebfbb8ed7580cce665cf9a47ee24",
+  "checked_at": "2026-10-30T10:24:40+00:00",
   "observations": [
     {
-      "checked_at": "2026-10-29T10:21:53+00:00",
+      "checked_at": "2026-10-30T10:24:40+00:00",
       "reachable": true,
       "slug": "adobe-firefly",
       "source_metadata": {
@@ -19,17 +19,23 @@
       "url": "https://firefly.adobe.com/"
     },
     {
-      "checked_at": "2026-10-29T10:21:53+00:00",
-      "reachable": false,
+      "checked_at": "2026-10-30T10:24:40+00:00",
+      "reachable": true,
       "slug": "adobe-podcast",
       "source_metadata": {
-        "reason": "network_or_protocol_error"
+        "final_url": "https://podcast.adobe.com/",
+        "media": {
+          "logo_url": "https://podcast.adobe.com/adobe-podcast-favicon.svg"
+        },
+        "meta_description": "Next generation audio from Adobe is here. Record, transcribe, edit, share. Crisp and clear, every time.",
+        "status": 200,
+        "title": "Adobe Podcast | AI audio recording and editing, all on the web"
       },
       "source_url": "https://podcast.adobe.com/",
       "url": "https://podcast.adobe.com/"
     },
     {
-      "checked_at": "2026-10-29T10:21:53+00:00",
+      "checked_at": "2026-10-30T10:24:40+00:00",
       "reachable": false,
       "slug": "canva",
       "source_metadata": {
@@ -41,7 +47,7 @@
       "url": "https://www.canva.com/magic-studio/"
     },
     {
-      "checked_at": "2026-10-29T10:21:53+00:00",
+      "checked_at": "2026-10-30T10:24:40+00:00",
       "reachable": false,
       "slug": "chatgpt",
       "source_metadata": {
@@ -53,24 +59,24 @@
       "url": "https://chatgpt.com/"
     },
     {
-      "checked_at": "2026-10-29T10:21:53+00:00",
+      "checked_at": "2026-10-30T10:24:40+00:00",
       "reachable": true,
       "slug": "claude",
       "source_metadata": {
         "final_url": "https://claude.com/product/overview",
         "media": {
-          "logo_url": "https://assets.claude.com/95a868946ac8a31e5ff832e2899f294aa368b836.png?w=32&h=32",
+          "logo_url": "https://claude.com/icon.png",
           "preview_image_url": "https://assets.claude.com/0127845de9b30f0146d7d45c49049be8b749b158.jpg?w=2400&h=1260&fit=crop"
         },
         "meta_description": "Claude is the AI assistant for work. Hand off tasks, turn ideas into decks, spreadsheets and prototypes, and run scheduled tasks across your apps and files.",
         "status": 200,
-        "title": "The AI for problem solvers | Claude by Anthropic"
+        "title": "Claude | The AI assistant for work"
       },
       "source_url": "https://claude.com/product/overview",
       "url": "https://claude.ai/"
     },
     {
-      "checked_at": "2026-10-29T10:21:53+00:00",
+      "checked_at": "2026-10-30T10:24:40+00:00",
       "reachable": true,
       "slug": "cursor",
       "source_metadata": {
@@ -87,7 +93,7 @@
       "url": "https://cursor.com/"
     },
     {
-      "checked_at": "2026-10-29T10:21:53+00:00",
+      "checked_at": "2026-10-30T10:24:40+00:00",
       "reachable": true,
       "slug": "elevenlabs",
       "source_metadata": {
@@ -104,7 +110,7 @@
       "url": "https://elevenlabs.io/"
     },
     {
-      "checked_at": "2026-10-29T10:21:53+00:00",
+      "checked_at": "2026-10-30T10:24:40+00:00",
       "reachable": false,
       "slug": "elicit",
       "source_metadata": {
@@ -114,7 +120,7 @@
       "url": "https://elicit.com/"
     },
     {
-      "checked_at": "2026-10-29T10:21:53+00:00",
+      "checked_at": "2026-10-30T10:24:40+00:00",
       "reachable": false,
       "slug": "gamma",
       "source_metadata": {
@@ -124,23 +130,17 @@
       "url": "https://gamma.app/"
     },
     {
-      "checked_at": "2026-10-29T10:21:53+00:00",
-      "reachable": true,
+      "checked_at": "2026-10-30T10:24:40+00:00",
+      "reachable": false,
       "slug": "gemini",
       "source_metadata": {
-        "final_url": "https://gemini.google/overview/",
-        "media": {
-          "logo_url": "https://gemini.google/images/spark_4c.png"
-        },
-        "meta_description": "Learn about Gemini: its capabilities, how it works, and its limitations. Explore Google's approach to AI, from model training to safety guidelines and future developments.",
-        "status": 200,
-        "title": "What is Gemini and how it works"
+        "reason": "compressed_response_not_supported"
       },
       "source_url": "https://gemini.google/overview/",
       "url": "https://gemini.google.com/"
     },
     {
-      "checked_at": "2026-10-29T10:21:53+00:00",
+      "checked_at": "2026-10-30T10:24:40+00:00",
       "reachable": true,
       "slug": "github-copilot",
       "source_metadata": {
@@ -156,7 +156,7 @@
       "url": "https://github.com/features/copilot"
     },
     {
-      "checked_at": "2026-10-29T10:21:53+00:00",
+      "checked_at": "2026-10-30T10:24:40+00:00",
       "reachable": true,
       "slug": "grammarly",
       "source_metadata": {
@@ -173,7 +173,7 @@
       "url": "https://www.grammarly.com/"
     },
     {
-      "checked_at": "2026-10-29T10:21:53+00:00",
+      "checked_at": "2026-10-30T10:24:40+00:00",
       "reachable": true,
       "slug": "heygen",
       "source_metadata": {
@@ -190,7 +190,7 @@
       "url": "https://www.heygen.com/"
     },
     {
-      "checked_at": "2026-10-29T10:21:53+00:00",
+      "checked_at": "2026-10-30T10:24:40+00:00",
       "reachable": true,
       "slug": "ideogram",
       "source_metadata": {
@@ -207,7 +207,7 @@
       "url": "https://ideogram.ai/"
     },
     {
-      "checked_at": "2026-10-29T10:21:53+00:00",
+      "checked_at": "2026-10-30T10:24:40+00:00",
       "reachable": true,
       "slug": "jasper",
       "source_metadata": {
@@ -224,7 +224,7 @@
       "url": "https://www.jasper.ai/"
     },
     {
-      "checked_at": "2026-10-29T10:21:53+00:00",
+      "checked_at": "2026-10-30T10:24:40+00:00",
       "reachable": false,
       "slug": "leonardo-ai",
       "source_metadata": {
@@ -236,7 +236,7 @@
       "url": "https://leonardo.ai/"
     },
     {
-      "checked_at": "2026-10-29T10:21:53+00:00",
+      "checked_at": "2026-10-30T10:24:40+00:00",
       "reachable": true,
       "slug": "microsoft-copilot",
       "source_metadata": {
@@ -252,7 +252,7 @@
       "url": "https://copilot.microsoft.com/"
     },
     {
-      "checked_at": "2026-10-29T10:21:53+00:00",
+      "checked_at": "2026-10-30T10:24:40+00:00",
       "reachable": false,
       "slug": "midjourney",
       "source_metadata": {
@@ -262,7 +262,7 @@
       "url": "https://www.midjourney.com/"
     },
     {
-      "checked_at": "2026-10-29T10:21:53+00:00",
+      "checked_at": "2026-10-30T10:24:40+00:00",
       "reachable": false,
       "slug": "notebooklm",
       "source_metadata": {
@@ -272,7 +272,7 @@
       "url": "https://notebook.google/"
     },
     {
-      "checked_at": "2026-10-29T10:21:53+00:00",
+      "checked_at": "2026-10-30T10:24:40+00:00",
       "reachable": true,
       "slug": "notion-ai",
       "source_metadata": {
@@ -289,7 +289,7 @@
       "url": "https://www.notion.com/product/ai"
     },
     {
-      "checked_at": "2026-10-29T10:21:53+00:00",
+      "checked_at": "2026-10-30T10:24:40+00:00",
       "reachable": false,
       "slug": "perplexity",
       "source_metadata": {
@@ -301,7 +301,7 @@
       "url": "https://www.perplexity.ai/"
     },
     {
-      "checked_at": "2026-10-29T10:21:53+00:00",
+      "checked_at": "2026-10-30T10:24:40+00:00",
       "reachable": true,
       "slug": "pika",
       "source_metadata": {
@@ -318,7 +318,7 @@
       "url": "https://pika.art/"
     },
     {
-      "checked_at": "2026-10-29T10:21:53+00:00",
+      "checked_at": "2026-10-30T10:24:40+00:00",
       "reachable": false,
       "slug": "quillbot",
       "source_metadata": {
@@ -328,7 +328,7 @@
       "url": "https://quillbot.com/"
     },
     {
-      "checked_at": "2026-10-29T10:21:53+00:00",
+      "checked_at": "2026-10-30T10:24:40+00:00",
       "reachable": false,
       "slug": "quizlet",
       "source_metadata": {
@@ -340,7 +340,7 @@
       "url": "https://quizlet.com/features/ai-study-tools"
     },
     {
-      "checked_at": "2026-10-29T10:21:53+00:00",
+      "checked_at": "2026-10-30T10:24:40+00:00",
       "reachable": true,
       "slug": "replit",
       "source_metadata": {
@@ -357,7 +357,7 @@
       "url": "https://replit.com/products/agent"
     },
     {
-      "checked_at": "2026-10-29T10:21:53+00:00",
+      "checked_at": "2026-10-30T10:24:40+00:00",
       "reachable": false,
       "slug": "runway",
       "source_metadata": {
@@ -367,7 +367,7 @@
       "url": "https://runway.com/"
     },
     {
-      "checked_at": "2026-10-29T10:21:53+00:00",
+      "checked_at": "2026-10-30T10:24:40+00:00",
       "reachable": true,
       "slug": "suno",
       "source_metadata": {
@@ -384,7 +384,7 @@
       "url": "https://suno.com/"
     },
     {
-      "checked_at": "2026-10-29T10:21:53+00:00",
+      "checked_at": "2026-10-30T10:24:40+00:00",
       "reachable": true,
       "slug": "synthesia",
       "source_metadata": {
@@ -397,7 +397,7 @@
       "url": "https://www.synthesia.io/"
     },
     {
-      "checked_at": "2026-10-29T10:21:53+00:00",
+      "checked_at": "2026-10-30T10:24:40+00:00",
       "reachable": false,
       "slug": "v0",
       "source_metadata": {
@@ -407,7 +407,7 @@
       "url": "https://v0.app/"
     },
     {
-      "checked_at": "2026-10-29T10:21:53+00:00",
+      "checked_at": "2026-10-30T10:24:40+00:00",
       "reachable": true,
       "slug": "zapier-ai",
       "source_metadata": {

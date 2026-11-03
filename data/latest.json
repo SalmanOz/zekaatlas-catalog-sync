@@ -1,9 +1,9 @@
 {
-  "batch_id": "0a5555a9cfff79484864e5a2f23239c3742a2dc8717a05b48cd1f406c624df87",
-  "checked_at": "2026-11-02T11:37:58+00:00",
+  "batch_id": "703f4ce09b1fab10fd5f77a7c390152ede111fe06ab44b9e00c6294c4ae418be",
+  "checked_at": "2026-11-03T11:16:43+00:00",
   "observations": [
     {
-      "checked_at": "2026-11-02T11:37:58+00:00",
+      "checked_at": "2026-11-03T11:16:43+00:00",
       "reachable": true,
       "slug": "adobe-firefly",
       "source_metadata": {
@@ -19,7 +19,7 @@
       "url": "https://firefly.adobe.com/"
     },
     {
-      "checked_at": "2026-11-02T11:37:58+00:00",
+      "checked_at": "2026-11-03T11:16:43+00:00",
       "reachable": true,
       "slug": "adobe-podcast",
       "source_metadata": {
@@ -35,7 +35,7 @@
       "url": "https://podcast.adobe.com/"
     },
     {
-      "checked_at": "2026-11-02T11:37:58+00:00",
+      "checked_at": "2026-11-03T11:16:43+00:00",
       "reachable": false,
       "slug": "canva",
       "source_metadata": {
@@ -47,7 +47,7 @@
       "url": "https://www.canva.com/magic-studio/"
     },
     {
-      "checked_at": "2026-11-02T11:37:58+00:00",
+      "checked_at": "2026-11-03T11:16:43+00:00",
       "reachable": false,
       "slug": "chatgpt",
       "source_metadata": {
@@ -59,7 +59,7 @@
       "url": "https://chatgpt.com/"
     },
     {
-      "checked_at": "2026-11-02T11:37:58+00:00",
+      "checked_at": "2026-11-03T11:16:43+00:00",
       "reachable": true,
       "slug": "claude",
       "source_metadata": {
@@ -76,7 +76,7 @@
       "url": "https://claude.ai/"
     },
     {
-      "checked_at": "2026-11-02T11:37:58+00:00",
+      "checked_at": "2026-11-03T11:16:43+00:00",
       "reachable": true,
       "slug": "cursor",
       "source_metadata": {
@@ -93,7 +93,7 @@
       "url": "https://cursor.com/"
     },
     {
-      "checked_at": "2026-11-02T11:37:58+00:00",
+      "checked_at": "2026-11-03T11:16:43+00:00",
       "reachable": true,
       "slug": "elevenlabs",
       "source_metadata": {
@@ -110,7 +110,7 @@
       "url": "https://elevenlabs.io/"
     },
     {
-      "checked_at": "2026-11-02T11:37:58+00:00",
+      "checked_at": "2026-11-03T11:16:43+00:00",
       "reachable": false,
       "slug": "elicit",
       "source_metadata": {
@@ -120,7 +120,7 @@
       "url": "https://elicit.com/"
     },
     {
-      "checked_at": "2026-11-02T11:37:58+00:00",
+      "checked_at": "2026-11-03T11:16:43+00:00",
       "reachable": false,
       "slug": "gamma",
       "source_metadata": {
@@ -130,23 +130,30 @@
       "url": "https://gamma.app/"
     },
     {
-      "checked_at": "2026-11-02T11:37:58+00:00",
-      "reachable": false,
+      "checked_at": "2026-11-03T11:16:43+00:00",
+      "reachable": true,
       "slug": "gemini",
       "source_metadata": {
-        "reason": "compressed_response_not_supported"
+        "final_url": "https://gemini.google/overview/",
+        "media": {
+          "logo_url": "https://gemini.google/images/spark_4c.png"
+        },
+        "meta_description": "Learn about Gemini: its capabilities, how it works, and its limitations. Explore Google's approach to AI, from model training to safety guidelines and future developments.",
+        "status": 200,
+        "title": "What is Gemini and how it works"
       },
       "source_url": "https://gemini.google/overview/",
       "url": "https://gemini.google.com/"
     },
     {
-      "checked_at": "2026-11-02T11:37:58+00:00",
+      "checked_at": "2026-11-03T11:16:43+00:00",
       "reachable": true,
       "slug": "github-copilot",
       "source_metadata": {
         "final_url": "https://github.com/features/copilot",
         "media": {
-          "logo_url": "https://github.githubassets.com/assets/pinned-octocat-093da3e6fa40.svg"
+          "logo_url": "https://github.githubassets.com/assets/pinned-octocat-093da3e6fa40.svg",
+          "preview_image_url": "https://images.ctfassets.net/8aevphvgewt8/4KxWJH8PVVXdqBLs1V3UJ8/7b7f6e8405daa24565374f993c0fca68/github-copilot-open-graph-img.jpg"
         },
         "meta_description": "GitHub Copilot works every step of the way, from an open issue to reviewing and merging a pull request. Use it in your editor, the terminal, on your desktop, and on GitHub.",
         "status": 200,
@@ -156,7 +163,7 @@
       "url": "https://github.com/features/copilot"
     },
     {
-      "checked_at": "2026-11-02T11:37:58+00:00",
+      "checked_at": "2026-11-03T11:16:43+00:00",
       "reachable": true,
       "slug": "grammarly",
       "source_metadata": {
@@ -173,7 +180,7 @@
       "url": "https://www.grammarly.com/"
     },
     {
-      "checked_at": "2026-11-02T11:37:58+00:00",
+      "checked_at": "2026-11-03T11:16:43+00:00",
       "reachable": true,
       "slug": "heygen",
       "source_metadata": {
@@ -190,7 +197,7 @@
       "url": "https://www.heygen.com/"
     },
     {
-      "checked_at": "2026-11-02T11:37:58+00:00",
+      "checked_at": "2026-11-03T11:16:43+00:00",
       "reachable": true,
       "slug": "ideogram",
       "source_metadata": {
@@ -207,7 +214,7 @@
       "url": "https://ideogram.ai/"
     },
     {
-      "checked_at": "2026-11-02T11:37:58+00:00",
+      "checked_at": "2026-11-03T11:16:43+00:00",
       "reachable": true,
       "slug": "jasper",
       "source_metadata": {
@@ -224,7 +231,7 @@
       "url": "https://www.jasper.ai/"
     },
     {
-      "checked_at": "2026-11-02T11:37:58+00:00",
+      "checked_at": "2026-11-03T11:16:43+00:00",
       "reachable": false,
       "slug": "leonardo-ai",
       "source_metadata": {
@@ -236,7 +243,7 @@
       "url": "https://leonardo.ai/"
     },
     {
-      "checked_at": "2026-11-02T11:37:58+00:00",
+      "checked_at": "2026-11-03T11:16:43+00:00",
       "reachable": true,
       "slug": "microsoft-copilot",
       "source_metadata": {
@@ -252,7 +259,7 @@
       "url": "https://copilot.microsoft.com/"
     },
     {
-      "checked_at": "2026-11-02T11:37:58+00:00",
+      "checked_at": "2026-11-03T11:16:43+00:00",
       "reachable": false,
       "slug": "midjourney",
       "source_metadata": {
@@ -262,7 +269,7 @@
       "url": "https://www.midjourney.com/"
     },
     {
-      "checked_at": "2026-11-02T11:37:58+00:00",
+      "checked_at": "2026-11-03T11:16:43+00:00",
       "reachable": false,
       "slug": "notebooklm",
       "source_metadata": {
@@ -272,7 +279,7 @@
       "url": "https://notebook.google/"
     },
     {
-      "checked_at": "2026-11-02T11:37:58+00:00",
+      "checked_at": "2026-11-03T11:16:43+00:00",
       "reachable": true,
       "slug": "notion-ai",
       "source_metadata": {
@@ -289,7 +296,7 @@
       "url": "https://www.notion.com/product/ai"
     },
     {
-      "checked_at": "2026-11-02T11:37:58+00:00",
+      "checked_at": "2026-11-03T11:16:43+00:00",
       "reachable": false,
       "slug": "perplexity",
       "source_metadata": {
@@ -301,7 +308,7 @@
       "url": "https://www.perplexity.ai/"
     },
     {
-      "checked_at": "2026-11-02T11:37:58+00:00",
+      "checked_at": "2026-11-03T11:16:43+00:00",
       "reachable": true,
       "slug": "pika",
       "source_metadata": {
@@ -310,7 +317,7 @@
           "logo_url": "https://pika.art/favicon.ico?favicon.03qzqgaru0by8.ico",
           "preview_image_url": "https://pika.art/brand/opengraph.png"
         },
-        "meta_description": "Pika is an AI creative platform for video, images and audio. Create product ads, reusable characters, music and voiceovers with leading AI models in one place.",
+        "meta_description": "Create AI video, images and audio with Pika. Use Seedance 2.5, Kling 4.0, Veo 3.1, Wan 3.0 and more models in one creative platform.",
         "status": 200,
         "title": "Pika: AI Creative Tools for Video, Image & AudioPika"
       },
@@ -318,7 +325,7 @@
       "url": "https://pika.art/"
     },
     {
-      "checked_at": "2026-11-02T11:37:58+00:00",
+      "checked_at": "2026-11-03T11:16:43+00:00",
       "reachable": false,
       "slug": "quillbot",
       "source_metadata": {
@@ -328,7 +335,7 @@
       "url": "https://quillbot.com/"
     },
     {
-      "checked_at": "2026-11-02T11:37:58+00:00",
+      "checked_at": "2026-11-03T11:16:43+00:00",
       "reachable": false,
       "slug": "quizlet",
       "source_metadata": {
@@ -340,7 +347,7 @@
       "url": "https://quizlet.com/features/ai-study-tools"
     },
     {
-      "checked_at": "2026-11-02T11:37:58+00:00",
+      "checked_at": "2026-11-03T11:16:43+00:00",
       "reachable": true,
       "slug": "replit",
       "source_metadata": {
@@ -357,7 +364,7 @@
       "url": "https://replit.com/products/agent"
     },
     {
-      "checked_at": "2026-11-02T11:37:58+00:00",
+      "checked_at": "2026-11-03T11:16:43+00:00",
       "reachable": false,
       "slug": "runway",
       "source_metadata": {
@@ -367,7 +374,7 @@
       "url": "https://runway.com/"
     },
     {
-      "checked_at": "2026-11-02T11:37:58+00:00",
+      "checked_at": "2026-11-03T11:16:43+00:00",
       "reachable": true,
       "slug": "suno",
       "source_metadata": {
@@ -384,7 +391,7 @@
       "url": "https://suno.com/"
     },
     {
-      "checked_at": "2026-11-02T11:37:58+00:00",
+      "checked_at": "2026-11-03T11:16:43+00:00",
       "reachable": true,
       "slug": "synthesia",
       "source_metadata": {
@@ -397,7 +404,7 @@
       "url": "https://www.synthesia.io/"
     },
     {
-      "checked_at": "2026-11-02T11:37:58+00:00",
+      "checked_at": "2026-11-03T11:16:43+00:00",
       "reachable": false,
       "slug": "v0",
       "source_metadata": {
@@ -407,7 +414,7 @@
       "url": "https://v0.app/"
     },
     {
-      "checked_at": "2026-11-02T11:37:58+00:00",
+      "checked_at": "2026-11-03T11:16:43+00:00",
       "reachable": true,
       "slug": "zapier-ai",
       "source_metadata": {

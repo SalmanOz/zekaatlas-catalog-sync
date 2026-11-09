@@ -1,9 +1,9 @@
 {
-  "batch_id": "34f82522841baa375f2d8f850326de5adf6f05234403b723699edf715e86459c",
-  "checked_at": "2026-11-08T10:43:23+00:00",
+  "batch_id": "be1fab00db30570aed6be9fd5c09f6d7f1179e5232c4791ae2525134ee4eaaf7",
+  "checked_at": "2026-11-09T12:01:53+00:00",
   "observations": [
     {
-      "checked_at": "2026-11-08T10:43:23+00:00",
+      "checked_at": "2026-11-09T12:01:53+00:00",
       "reachable": true,
       "slug": "adobe-firefly",
       "source_metadata": {
@@ -19,7 +19,7 @@
       "url": "https://firefly.adobe.com/"
     },
     {
-      "checked_at": "2026-11-08T10:43:23+00:00",
+      "checked_at": "2026-11-09T12:01:53+00:00",
       "reachable": true,
       "slug": "adobe-podcast",
       "source_metadata": {
@@ -35,7 +35,7 @@
       "url": "https://podcast.adobe.com/"
     },
     {
-      "checked_at": "2026-11-08T10:43:23+00:00",
+      "checked_at": "2026-11-09T12:01:53+00:00",
       "reachable": false,
       "slug": "canva",
       "source_metadata": {
@@ -47,7 +47,7 @@
       "url": "https://www.canva.com/magic-studio/"
     },
     {
-      "checked_at": "2026-11-08T10:43:23+00:00",
+      "checked_at": "2026-11-09T12:01:53+00:00",
       "reachable": true,
       "slug": "chatgpt",
       "source_metadata": {
@@ -63,7 +63,7 @@
       "url": "https://chatgpt.com/"
     },
     {
-      "checked_at": "2026-11-08T10:43:23+00:00",
+      "checked_at": "2026-11-09T12:01:53+00:00",
       "reachable": true,
       "slug": "claude",
       "source_metadata": {
@@ -80,7 +80,7 @@
       "url": "https://claude.ai/"
     },
     {
-      "checked_at": "2026-11-08T10:43:23+00:00",
+      "checked_at": "2026-11-09T12:01:53+00:00",
       "reachable": true,
       "slug": "cursor",
       "source_metadata": {
@@ -97,7 +97,7 @@
       "url": "https://cursor.com/"
     },
     {
-      "checked_at": "2026-11-08T10:43:23+00:00",
+      "checked_at": "2026-11-09T12:01:53+00:00",
       "reachable": true,
       "slug": "elevenlabs",
       "source_metadata": {
@@ -114,7 +114,7 @@
       "url": "https://elevenlabs.io/"
     },
     {
-      "checked_at": "2026-11-08T10:43:23+00:00",
+      "checked_at": "2026-11-09T12:01:53+00:00",
       "reachable": false,
       "slug": "elicit",
       "source_metadata": {
@@ -124,7 +124,7 @@
       "url": "https://elicit.com/"
     },
     {
-      "checked_at": "2026-11-08T10:43:23+00:00",
+      "checked_at": "2026-11-09T12:01:53+00:00",
       "reachable": false,
       "slug": "gamma",
       "source_metadata": {
@@ -136,27 +136,39 @@
       "url": "https://gamma.app/"
     },
     {
-      "checked_at": "2026-11-08T10:43:23+00:00",
-      "reachable": false,
+      "checked_at": "2026-11-09T12:01:53+00:00",
+      "reachable": true,
       "slug": "gemini",
       "source_metadata": {
-        "reason": "compressed_response_not_supported"
+        "final_url": "https://gemini.google/overview/",
+        "media": {
+          "logo_url": "https://gemini.google/images/spark_4c.png"
+        },
+        "meta_description": "Learn about Gemini: its capabilities, how it works, and its limitations. Explore Google's approach to AI, from model training to safety guidelines and future developments.",
+        "status": 200,
+        "title": "What is Gemini and how it works"
       },
       "source_url": "https://gemini.google/overview/",
       "url": "https://gemini.google.com/"
     },
     {
-      "checked_at": "2026-11-08T10:43:23+00:00",
-      "reachable": false,
+      "checked_at": "2026-11-09T12:01:53+00:00",
+      "reachable": true,
       "slug": "github-copilot",
       "source_metadata": {
-        "reason": "network_or_protocol_error"
+        "final_url": "https://github.com/features/copilot",
+        "media": {
+          "logo_url": "https://github.githubassets.com/assets/pinned-octocat-093da3e6fa40.svg"
+        },
+        "meta_description": "GitHub Copilot works every step of the way, from an open issue to reviewing and merging a pull request. Use it in your editor, the terminal, on your desktop, and on GitHub.",
+        "status": 200,
+        "title": "GitHub Copilot · Your AI coding agent · GitHub · GitHub"
       },
       "source_url": "https://github.com/features/copilot",
       "url": "https://github.com/features/copilot"
     },
     {
-      "checked_at": "2026-11-08T10:43:23+00:00",
+      "checked_at": "2026-11-09T12:01:53+00:00",
       "reachable": true,
       "slug": "grammarly",
       "source_metadata": {
@@ -173,7 +185,7 @@
       "url": "https://www.grammarly.com/"
     },
     {
-      "checked_at": "2026-11-08T10:43:23+00:00",
+      "checked_at": "2026-11-09T12:01:53+00:00",
       "reachable": true,
       "slug": "heygen",
       "source_metadata": {
@@ -190,7 +202,137 @@
       "url": "https://www.heygen.com/"
     },
     {
-      "checked_at": "2026-11-08T10:43:23+00:00",
+      "checked_at": "2026-11-09T12:01:53+00:00",
+      "reachable": true,
+      "slug": "hf-a-test-user-in-the-wrold-qwen-image-21-uncensored",
+      "source_metadata": {
+        "meta_description": "Hugging Face üzerinde sunulan herkese açık bir gradio demosu. Yayına alınmadan önce editör incelemesi gerekir.",
+        "reason": "discovered_from_huggingface_api",
+        "status": 200,
+        "title": "Hugging Face: a-test-user-in-the-wrold/qwen-image-21-uncensored"
+      },
+      "source_url": "https://huggingface.co/spaces/a-test-user-in-the-wrold/qwen-image-21-uncensored",
+      "url": "https://huggingface.co/spaces/a-test-user-in-the-wrold/qwen-image-21-uncensored"
+    },
+    {
+      "checked_at": "2026-11-09T12:01:53+00:00",
+      "reachable": true,
+      "slug": "hf-fendouai-free-ai-humanizer",
+      "source_metadata": {
+        "meta_description": "Hugging Face üzerinde sunulan herkese açık bir static demosu. Yayına alınmadan önce editör incelemesi gerekir.",
+        "reason": "discovered_from_huggingface_api",
+        "status": 200,
+        "title": "Hugging Face: fendouai/free-ai-humanizer"
+      },
+      "source_url": "https://huggingface.co/spaces/fendouai/free-ai-humanizer",
+      "url": "https://huggingface.co/spaces/fendouai/free-ai-humanizer"
+    },
+    {
+      "checked_at": "2026-11-09T12:01:53+00:00",
+      "reachable": true,
+      "slug": "hf-hugging-apps-bfs-best-face-swap",
+      "source_metadata": {
+        "meta_description": "Hugging Face üzerinde sunulan herkese açık bir gradio demosu. Yayına alınmadan önce editör incelemesi gerekir.",
+        "reason": "discovered_from_huggingface_api",
+        "status": 200,
+        "title": "Hugging Face: hugging-apps/bfs-best-face-swap"
+      },
+      "source_url": "https://huggingface.co/spaces/hugging-apps/bfs-best-face-swap",
+      "url": "https://huggingface.co/spaces/hugging-apps/bfs-best-face-swap"
+    },
+    {
+      "checked_at": "2026-11-09T12:01:53+00:00",
+      "reachable": true,
+      "slug": "hf-huggingface-moe-blogpost",
+      "source_metadata": {
+        "meta_description": "Hugging Face üzerinde sunulan herkese açık bir docker demosu. Yayına alınmadan önce editör incelemesi gerekir.",
+        "reason": "discovered_from_huggingface_api",
+        "status": 200,
+        "title": "Hugging Face: huggingface/moe-blogpost"
+      },
+      "source_url": "https://huggingface.co/spaces/huggingface/moe-blogpost",
+      "url": "https://huggingface.co/spaces/huggingface/moe-blogpost"
+    },
+    {
+      "checked_at": "2026-11-09T12:01:53+00:00",
+      "reachable": true,
+      "slug": "hf-jcishere-wan2-2-i2v-v3",
+      "source_metadata": {
+        "meta_description": "Hugging Face üzerinde sunulan herkese açık bir gradio demosu. Yayına alınmadan önce editör incelemesi gerekir.",
+        "reason": "discovered_from_huggingface_api",
+        "status": 200,
+        "title": "Hugging Face: JCisHERE/wan2-2-i2v-v3"
+      },
+      "source_url": "https://huggingface.co/spaces/JCisHERE/wan2-2-i2v-v3",
+      "url": "https://huggingface.co/spaces/JCisHERE/wan2-2-i2v-v3"
+    },
+    {
+      "checked_at": "2026-11-09T12:01:53+00:00",
+      "reachable": true,
+      "slug": "hf-joelniklaus-harness-leaderboard",
+      "source_metadata": {
+        "meta_description": "Hugging Face üzerinde sunulan herkese açık bir docker demosu. Yayına alınmadan önce editör incelemesi gerekir.",
+        "reason": "discovered_from_huggingface_api",
+        "status": 200,
+        "title": "Hugging Face: joelniklaus/harness-leaderboard"
+      },
+      "source_url": "https://huggingface.co/spaces/joelniklaus/harness-leaderboard",
+      "url": "https://huggingface.co/spaces/joelniklaus/harness-leaderboard"
+    },
+    {
+      "checked_at": "2026-11-09T12:01:53+00:00",
+      "reachable": true,
+      "slug": "hf-kulkas2pintu-wan777",
+      "source_metadata": {
+        "meta_description": "Hugging Face üzerinde sunulan herkese açık bir gradio demosu. Yayına alınmadan önce editör incelemesi gerekir.",
+        "reason": "discovered_from_huggingface_api",
+        "status": 200,
+        "title": "Hugging Face: kulkas2pintu/wan777"
+      },
+      "source_url": "https://huggingface.co/spaces/kulkas2pintu/wan777",
+      "url": "https://huggingface.co/spaces/kulkas2pintu/wan777"
+    },
+    {
+      "checked_at": "2026-11-09T12:01:53+00:00",
+      "reachable": true,
+      "slug": "hf-liquidai-lfm3-omni-2b-webgpu",
+      "source_metadata": {
+        "meta_description": "Hugging Face üzerinde sunulan herkese açık bir static demosu. Yayına alınmadan önce editör incelemesi gerekir.",
+        "reason": "discovered_from_huggingface_api",
+        "status": 200,
+        "title": "Hugging Face: LiquidAI/LFM3-Omni-2B-WebGPU"
+      },
+      "source_url": "https://huggingface.co/spaces/LiquidAI/LFM3-Omni-2B-WebGPU",
+      "url": "https://huggingface.co/spaces/LiquidAI/LFM3-Omni-2B-WebGPU"
+    },
+    {
+      "checked_at": "2026-11-09T12:01:53+00:00",
+      "reachable": true,
+      "slug": "hf-speridlabs-idol",
+      "source_metadata": {
+        "meta_description": "Hugging Face üzerinde sunulan herkese açık bir gradio demosu. Yayına alınmadan önce editör incelemesi gerekir.",
+        "reason": "discovered_from_huggingface_api",
+        "status": 200,
+        "title": "Hugging Face: speridlabs/idol"
+      },
+      "source_url": "https://huggingface.co/spaces/speridlabs/idol",
+      "url": "https://huggingface.co/spaces/speridlabs/idol"
+    },
+    {
+      "checked_at": "2026-11-09T12:01:53+00:00",
+      "reachable": true,
+      "slug": "hf-yuyaotechnology-matterseek",
+      "source_metadata": {
+        "meta_description": "Hugging Face üzerinde sunulan herkese açık bir static demosu. Yayına alınmadan önce editör incelemesi gerekir.",
+        "reason": "discovered_from_huggingface_api",
+        "status": 200,
+        "title": "Hugging Face: YuyaoTechnology/MatterSeek"
+      },
+      "source_url": "https://huggingface.co/spaces/YuyaoTechnology/MatterSeek",
+      "url": "https://huggingface.co/spaces/YuyaoTechnology/MatterSeek"
+    },
+    {
+      "checked_at": "2026-11-09T12:01:53+00:00",
       "reachable": true,
       "slug": "ideogram",
       "source_metadata": {
@@ -207,7 +349,7 @@
       "url": "https://ideogram.ai/"
     },
     {
-      "checked_at": "2026-11-08T10:43:23+00:00",
+      "checked_at": "2026-11-09T12:01:53+00:00",
       "reachable": true,
       "slug": "jasper",
       "source_metadata": {
@@ -224,7 +366,7 @@
       "url": "https://www.jasper.ai/"
     },
     {
-      "checked_at": "2026-11-08T10:43:23+00:00",
+      "checked_at": "2026-11-09T12:01:53+00:00",
       "reachable": false,
       "slug": "leonardo-ai",
       "source_metadata": {
@@ -236,7 +378,7 @@
       "url": "https://leonardo.ai/"
     },
     {
-      "checked_at": "2026-11-08T10:43:23+00:00",
+      "checked_at": "2026-11-09T12:01:53+00:00",
       "reachable": true,
       "slug": "microsoft-copilot",
       "source_metadata": {
@@ -252,7 +394,7 @@
       "url": "https://copilot.microsoft.com/"
     },
     {
-      "checked_at": "2026-11-08T10:43:23+00:00",
+      "checked_at": "2026-11-09T12:01:53+00:00",
       "reachable": false,
       "slug": "midjourney",
       "source_metadata": {
@@ -262,7 +404,7 @@
       "url": "https://www.midjourney.com/"
     },
     {
-      "checked_at": "2026-11-08T10:43:23+00:00",
+      "checked_at": "2026-11-09T12:01:53+00:00",
       "reachable": false,
       "slug": "notebooklm",
       "source_metadata": {
@@ -272,7 +414,7 @@
       "url": "https://notebook.google/"
     },
     {
-      "checked_at": "2026-11-08T10:43:23+00:00",
+      "checked_at": "2026-11-09T12:01:53+00:00",
       "reachable": true,
       "slug": "notion-ai",
       "source_metadata": {
@@ -289,7 +431,7 @@
       "url": "https://www.notion.com/product/ai"
     },
     {
-      "checked_at": "2026-11-08T10:43:23+00:00",
+      "checked_at": "2026-11-09T12:01:53+00:00",
       "reachable": false,
       "slug": "perplexity",
       "source_metadata": {
@@ -301,7 +443,7 @@
       "url": "https://www.perplexity.ai/"
     },
     {
-      "checked_at": "2026-11-08T10:43:23+00:00",
+      "checked_at": "2026-11-09T12:01:53+00:00",
       "reachable": true,
       "slug": "pika",
       "source_metadata": {
@@ -318,7 +460,7 @@
       "url": "https://pika.art/"
     },
     {
-      "checked_at": "2026-11-08T10:43:23+00:00",
+      "checked_at": "2026-11-09T12:01:53+00:00",
       "reachable": false,
       "slug": "quillbot",
       "source_metadata": {
@@ -328,7 +470,7 @@
       "url": "https://quillbot.com/"
     },
     {
-      "checked_at": "2026-11-08T10:43:23+00:00",
+      "checked_at": "2026-11-09T12:01:53+00:00",
       "reachable": false,
       "slug": "quizlet",
       "source_metadata": {
@@ -340,7 +482,7 @@
       "url": "https://quizlet.com/features/ai-study-tools"
     },
     {
-      "checked_at": "2026-11-08T10:43:23+00:00",
+      "checked_at": "2026-11-09T12:01:53+00:00",
       "reachable": true,
       "slug": "replit",
       "source_metadata": {
@@ -357,7 +499,7 @@
       "url": "https://replit.com/products/agent"
     },
     {
-      "checked_at": "2026-11-08T10:43:23+00:00",
+      "checked_at": "2026-11-09T12:01:53+00:00",
       "reachable": false,
       "slug": "runway",
       "source_metadata": {
@@ -367,7 +509,7 @@
       "url": "https://runway.com/"
     },
     {
-      "checked_at": "2026-11-08T10:43:23+00:00",
+      "checked_at": "2026-11-09T12:01:53+00:00",
       "reachable": true,
       "slug": "suno",
       "source_metadata": {
@@ -384,7 +526,7 @@
       "url": "https://suno.com/"
     },
     {
-      "checked_at": "2026-11-08T10:43:23+00:00",
+      "checked_at": "2026-11-09T12:01:53+00:00",
       "reachable": true,
       "slug": "synthesia",
       "source_metadata": {
@@ -397,7 +539,7 @@
       "url": "https://www.synthesia.io/"
     },
     {
-      "checked_at": "2026-11-08T10:43:23+00:00",
+      "checked_at": "2026-11-09T12:01:53+00:00",
       "reachable": false,
       "slug": "v0",
       "source_metadata": {
@@ -407,7 +549,7 @@
       "url": "https://v0.app/"
     },
     {
-      "checked_at": "2026-11-08T10:43:23+00:00",
+      "checked_at": "2026-11-09T12:01:53+00:00",
       "reachable": true,
       "slug": "zapier-ai",
       "source_metadata": {
